@@ -119,6 +119,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); font-weight: 600; }
 section { padding: 6.5rem 0; }
 .bg-dark { background: var(--green-800); }
 .bg-light { background: var(--sand-200); }
+.bg-light2 { background: var(--green-300); }
 
 .section-header {
   display: flex;
@@ -369,7 +370,7 @@ section { padding: 6.5rem 0; }
 
 /* ── HERO ───────────────────────────────────────────────────── */
 .hero {
-  background: var(--green-800);
+  background: var(--green-300);
   padding: 11rem 0 6rem;
   overflow: hidden;
 }
@@ -380,7 +381,7 @@ section { padding: 6.5rem 0; }
   align-items: center;
 }
 .hero-copy p {
-  color: var(--sand-200);
+  color: var(--sand-800);
   font-size: 1.08rem;
   line-height: 1.85;
   max-width: 460px;
@@ -391,6 +392,9 @@ section { padding: 6.5rem 0; }
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.hero h1 {
+  color: var(--green-700); 
 }
 .hero-visual::before {
   content: '';
@@ -420,7 +424,7 @@ section { padding: 6.5rem 0; }
   gap: 4rem;
 }
 .history-copy p + p { margin-top: 1.5rem; }
-.history-copy p { color: var(--sand-300); }
+.history-copy p { color: var(--sand-700); }
 .history-copy .blank { display: inline-block; min-width: 90px; border-bottom: 1px solid var(--sand-300); }
 .history h2 { margin-bottom: 1rem; }
 
@@ -437,7 +441,7 @@ section { padding: 6.5rem 0; }
   font-size: clamp(3rem, 6vw, 5.5rem);
   line-height: 1;
   color: transparent;
-  -webkit-text-stroke: 1.5px var(--sand-300);
+  -webkit-text-stroke: 1.5px var(--sand-700);
   margin-bottom: 1rem;
 }
 .stat .stat-label {
@@ -446,7 +450,7 @@ section { padding: 6.5rem 0; }
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--sand-300);
+  color: var(--sand-700);
   max-width: 220px;
 }
 
