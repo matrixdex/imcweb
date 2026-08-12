@@ -222,6 +222,13 @@ section { padding: 6.5rem 0; }
   display: block;
 }
 
+@media (max-width: 800px) { 
+  .brand-mark-img {
+    width: 100px;
+    height: 100px;
+  } 
+}
+
 /* ── NAVIGATION ─────────────────────────────────────────────── */
 #nav {
   position: fixed;
