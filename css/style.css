@@ -212,11 +212,11 @@ section { padding: 6.5rem 0; }
   gap: 0;
   color: var(--cream);
 }
-.brand-mark svg { width: 62px; height: 62px; }
+
 .brand-mark svg text { font-family: var(--sans); }
 .brand-mark-img {
-  width: 62px;
-  height: 62px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
