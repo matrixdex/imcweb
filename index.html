@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Integrated Medical Centre — Osteopathy, Acupuncture &amp; Hypoxic Training</title>
 <meta name="description" content="Integrated Medical Centre is an alternative centre and store, providing natural therapies such as osteopathy, acupuncture, hypoxic training, herbal vitamins and supplements." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="css/style.css" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
 <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
@@ -15,9 +18,12 @@
 <!-- ══════════════════════ NAVIGATION ══════════════════════ -->
 <nav id="nav">
   <div class="nav-inner">
-    <a href="index.html" class="brand-mark" aria-label="Integrated Medical Centre home">
-      <img src="assets/imc-logo2.png" alt="Integrated Medical Centre" class="brand-mark-img" />
-    </a>
+    <div class="brand-block">
+      <a href="index.html" class="brand-mark" aria-label="Integrated Medical Centre home">
+        <img src="assets/imc-logo2.png" alt="Integrated Medical Centre" class="brand-mark-img" />
+      </a>
+      <span class="brand-subtitle">LEADING NAME IN ETHICAL MEDICINE</span>
+    </div>
 
     <ul class="nav-links" id="navLinks">
       <li><a href="pages/about.html" class="nav-link">About Us</a></li>
@@ -62,7 +68,7 @@
 </nav>
 
 <!-- ══════════════════════ HERO ══════════════════════ -->
-<section class="hero bg-light2" id="hero">
+<section class="hero bg-alt-light" id="hero">
   <div class="container">
     <div class="hero-visual reveal" aria-hidden="true">
       <div class="hero-molecule-canvas" id="heroMolecule"></div>
@@ -77,17 +83,28 @@
 </section>
 
 <!-- ══════════════════════ HISTORY / WHO WE ARE ══════════════════════ -->
-<section class="history bg-light2" id="about">
+<section class="history bg-dark on-dark" id="about">
   <div class="container">
     <div class="history-heading reveal">
-      <span class="eyebrow">History.</span>
+      
       <h2>Who We Are</h2>
     </div>
-    <div class="history-copy reveal">
-      <p>Integrated Medical Centre is an alternative centre and store, providing natural therapies such as osteopathy, acupuncture, hypoxic training, herbal vitamins and supplements. IMC is a drug-free, non-invasive clinic with the ultimate goal of health improvement across all bodily systems and was established in <span class="blank"></span> by Dr. Imran Ali.</p>
-      <p>Our treatments target the neurological, circulatory, and lymphatic systems with a focus on the joints, muscles, and spine. Our non-invasive care and emphasis on manual diagnosis and treatment sets us apart from other medical practices. We do, however, provide additional services related to cosmetic procedures and physiotherapy, as well as cutting-edge technology Hypoxic training machines with the goal of improving blood circulation (especially in the brain), boosting your immune system, assisting with recovery after injuries and respiratory infections, decreasing inflammation, and much more.</p>
+
+    <div class="history-grid reveal">
+      <div class="history-photo-block">
+        <div class="history-photo">
+          <img src="assets/hs.jpeg" alt="Harley Street sign, London" width="612" height="609" loading="lazy" />
+        </div>
+        <p class="history-photo-caption">75 Harley Street, London</p>
+      </div>
+
+      <div class="history-copy">
+        <p>Integrated Medical Centre is an alternative centre and store, providing natural therapies such as osteopathy, acupuncture, hypoxic training, herbal vitamins and supplements. IMC is a drug-free, non-invasive clinic with the ultimate goal of health improvement across all bodily systems and was established in <span class="blank"></span> by Dr. Imran Ali.</p>
+        <p>Our treatments target the neurological, circulatory, and lymphatic systems with a focus on the joints, muscles, and spine. Our non-invasive care and emphasis on manual diagnosis and treatment sets us apart from other medical practices. We do, however, provide additional services related to cosmetic procedures and physiotherapy, as well as cutting-edge technology Hypoxic training machines with the goal of improving blood circulation (especially in the brain), boosting your immune system, assisting with recovery after injuries and respiratory infections, decreasing inflammation, and much more.</p>
+      </div>
     </div>
   </div>
+
   <div class="container">
     <div class="stats-row">
       <div class="stat reveal">
@@ -107,17 +124,16 @@
 </section>
 
 <!-- ══════════════════════ DOCTORS ══════════════════════ -->
-<section class="doctors bg-dark on-dark">
+<section class="doctors bg-alt-light">
   <div class="container">
-    <div class="doctors-tabs">
-      <button class="doctor-tab active" data-doctor="imran">
-        <span class="doctor-tab-avatar"><span class="img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></span></span>
-        <span class="doctor-tab-name">Dr Imran Ali</span>
-      </button>
+    
+    
+    <div class="section-header reveal">
+      <div class="heading-block">
+        <h2>Dr. Imran Ali</h2>
+      </div>
       
     </div>
-    <div class="doctors-track"><div class="doctors-track-fill" id="doctorsTrackFill"></div></div>
-
     <div class="doctor-panels">
       <div class="doctor-panel active" data-doctor-panel="imran">
         <div class="doctor-panel-copy">
@@ -135,11 +151,11 @@
 </section>
 
 <!-- ══════════════════════ CLINICS ("What We Offer") ══════════════════════ -->
-<section class="clinics bg-light" id="clinics">
+<section class="clinics bg-dark on-dark" id="clinics">
   <div class="container">
     <div class="section-header reveal">
       <div class="heading-block">
-        <span class="eyebrow">Clinics.</span>
+        
         <h2>What We Offer</h2>
       </div>
       <div class="arrow-controls header-action">
@@ -192,13 +208,13 @@
 </section>
 
 <!-- ══════════════════════ TESTIMONIALS ══════════════════════ -->
-<section class="testimonials bg-light">
+<section class="testimonials bg-alt-light">
   <div class="container">
     <div class="testimonial-photo reveal">
       <span class="img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg><span class="placeholder-label">Client Photo</span></span>
     </div>
     <div class="testimonial-copy reveal">
-      <span class="eyebrow">Testimonials.</span>
+      
       <h2>Client<br>Testimonials</h2>
       <div class="testimonial-name" id="testiName">James R.</div>
       <div class="testimonial-role" id="testiRole">Long-term Patient</div>
@@ -217,14 +233,14 @@
 </section>
 
 <!-- ══════════════════════ PRODUCTS ══════════════════════ -->
-<section class="products bg-light" id="products">
+<section class="products bg-dark on-dark" id="products">
   <div class="container">
     <div class="section-header reveal">
       <div class="heading-block">
-        <span class="eyebrow">Products.</span>
+        
         <h2>Our Products</h2>
       </div>
-      <a href="pages/shop.html" class="btn btn-outline-dark header-action">View All Products</a>
+      <a href="pages/shop.html" class="btn btn-outline-cream header-action">View All Products</a>
     </div>
 
     <div class="products-grid">
@@ -280,11 +296,11 @@
 </section>
 
 <!-- ══════════════════════ ARTICLES ══════════════════════ -->
-<section class="articles bg-dark on-dark" id="articles">
+<section class="articles bg-alt-light" id="articles">
   <div class="container">
     <div class="section-header reveal">
       <div class="heading-block"><h2>Latest Articles</h2></div>
-      <a href="pages/press.html" class="btn btn-outline-cream header-action">View All</a>
+      <a href="pages/press.html" class="btn btn-outline-dark header-action">View All</a>
     </div>
 
     <div class="articles-list reveal">
@@ -328,7 +344,7 @@
 </section>
 
 <!-- ══════════════════════ CTA / GET IN TOUCH ══════════════════════ -->
-<section class="cta-band bg-light" id="contact">
+<section class="cta-band bg-dark on-dark" id="contact">
   <div class="container">
     <h2>Get In Touch</h2>
     <p>Integrated Health is the gathering together of all the factors that contribute to your continued well-being and balancing them to enable you to attain your full potential all the time.</p>
@@ -342,21 +358,7 @@
     <div class="footer-top">
       <div class="footer-brand-col">
         <a href="index.html" class="brand-mark" aria-label="Integrated Medical Centre home">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path id="logoCircleFooter" d="M 50,8 A 42,42 0 1 1 49.9,8" fill="none"/>
-            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="0.75"/>
-            <text font-size="6.3" fill="currentColor" letter-spacing="1.5">
-              <textPath href="#logoCircleFooter" startOffset="2%">INTEGRATED MEDICAL CENTRE</textPath>
-            </text>
-            <g transform="translate(50,52)" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="0" cy="-8" r="9"/>
-              <path d="M-9,-8 A9,9 0 0,0 9,-8"/>
-              <path d="M0,-17 L0,1"/>
-              <path d="M-9,-8 L9,-8"/>
-              <path d="M-16,10 C-16,2 -10,-2 -10,6 C-10,-3 -3,-3 -3,6 L-3,12 C-3,16 -8,20 -16,10 Z"/>
-              <path d="M16,10 C16,2 10,-2 10,6 C10,-3 3,-3 3,6 L3,12 C3,16 8,20 16,10 Z"/>
-            </g>
-          </svg>
+          <img src="assets/imc-logo.png" alt="Integrated Medical Centre" class="brand-mark-logo" />
         </a>
         <div class="footer-social">
           <a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8.5z"/></svg>LinkedIn</a>
@@ -402,7 +404,7 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 Integrated Medical Centre. All Rights Reserved.</p>
-      <p>Charterhouse Clinic, London</p>
+      <p>75 Harley Street, London</p>
     </div>
   </div>
 </footer>
