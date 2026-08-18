@@ -60,7 +60,7 @@
   --sans: 'Manrope', 'Helvetica Neue', sans-serif;
 
   /* Geometry */
-  --radius-sm: 4px;
+  --radius-sm: 100px;
   --radius-md: 10px;
   --radius-lg: 18px;
   --radius-pill: 100px;
@@ -740,11 +740,84 @@ section { padding: 6.5rem 0; }
 }
 
 /* ── CTA / GET IN TOUCH ─────────────────────────────────────── */
-.cta-band { text-align: center; padding: 7rem 0 6rem; }
-.cta-band .container { max-width: 720px; }
-.cta-band p { color: var(--ink-muted); font-size: 1.08rem; margin: 1.5rem auto 2.5rem; max-width: 520px; }
-.on-dark .cta-band p { color: var(--sand-300); }
-.cta-band .btn { width: 100%; max-width: 640px; padding: 1.3rem; }
+.visit { padding: 7rem 0; }
+.visit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+.visit-info h2 { margin-bottom: 1.25rem; }
+.visit-info > p { color: var(--ink-muted); font-size: 1.08rem; max-width: 460px; }
+.on-dark .visit-info > p { color: var(--sand-300); }
+
+.visit-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  margin: 2rem 0 2.25rem;
+  padding-top: 1.85rem;
+  border-top: 1px solid var(--sand-300);
+}
+.on-dark .visit-details { border-top-color: rgba(242,236,218,0.16); }
+.visit-detail { display: flex; align-items: center; gap: 0.9rem; }
+.visit-detail-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background: var(--green-700);
+  color: var(--cream);
+}
+.on-dark .visit-detail-icon { background: rgba(242,236,218,0.1); }
+.visit-detail-icon svg { width: 15px; height: 15px; }
+.visit-detail-text strong {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green-500);
+  margin-bottom: 0.2rem;
+}
+.visit-detail-text span,
+.visit-detail-text a {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.on-dark .visit-detail-text span,
+.on-dark .visit-detail-text a { color: var(--cream); }
+.visit-detail-text a { transition: color var(--transition); }
+.visit-detail-text a:hover { color: var(--green-500); }
+
+/* Photo column: the image sets the column height, and the maps button sits
+   flush beneath it at the same width, so the two columns finish level
+   instead of leaving a hollow gap above the footer. */
+.visit-map { display: flex; flex-direction: column; gap: 1.75rem; }
+.visit-photo {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+  box-shadow: var(--shadow-md);
+}
+.visit-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.visit-map-btn { width: 100%; }
+
+@media (max-width: 900px) {
+  .visit-grid { grid-template-columns: 1fr; gap: 2.75rem; }
+  .visit-info > p { max-width: none; }
+  .visit-details { margin: 2.25rem 0; }
+}
 
 /* ── FOOTER ─────────────────────────────────────────────────── */
 footer.site-footer { background: var(--green-800); padding: 5rem 0 2.5rem; }
