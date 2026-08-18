@@ -56,8 +56,9 @@
   --white: #ffffff;
 
   /* Typography */
-  --display: 'Libre Franklin', 'Manrope', 'Helvetica Neue', sans-serif;
-  --sans: 'Manrope', 'Helvetica Neue', sans-serif;
+  --display: 'Cormorant Garamond', 'Georgia', serif;
+--body-serif: 'EB Garamond', 'Georgia', serif;
+--sans: 'Jost', 'Helvetica Neue', sans-serif;
 
   /* Geometry */
   --radius-sm: 100px;
@@ -81,7 +82,7 @@ html { scroll-behavior: smooth; }
   *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
 }
 body {
-  font-family: var(--sans);
+  font-family: var(--body-serif);
   font-size: 1rem;
   line-height: 1.7;
   color: var(--ink-soft);
