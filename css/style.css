@@ -16,16 +16,20 @@
 
 /* ── Design tokens ──────────────────────────────────────────── */
 :root {
-  /* Greens — primary brand family */
+  /* Greens — primary brand family
+     Note: --green-800 and --green-200 hold the site's two theme
+     background colors (dark forest / warm cream) — names kept for
+     minimal disruption to existing references, though they're no
+     longer literal greens. */
   --green-950: #232e20;
   --green-900: #2c3927;
-  --green-800: #38472f;   /* primary dark section background */
+  --green-800: #1a2e1f;   /* primary dark section background */
   --green-700: #465a3c;   /* secondary dark surface (cards on dark) */
   --green-600: #5c7650;
   --green-500: #6f9468;   /* sage accent — buttons, arrows, eyebrows */
   --green-400: #8bab7f;
   --green-300: #a8c29c;
-  --green-200: #c7d9bc;
+  --green-200: #f8f4ec;
 
   /* Parchment / beige family */
 
@@ -135,7 +139,7 @@ section { padding: 6.5rem 0; }
 
 .section-header {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 2rem;
   margin-bottom: 3.5rem;
@@ -557,56 +561,14 @@ section { padding: 6.5rem 0; }
   .stats-row { grid-template-columns: 1fr; gap: 2.5rem; margin-top: 3rem; }
 }
 
-/* ── DOCTORS (tabbed profiles) ──────────────────────────────── */
-.doctors-tabs {
-  display: flex;
-  gap: 3.5rem;
-  margin-bottom: 0;
-}
-.doctor-tab {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding-bottom: 1.75rem;
-  opacity: 0.5;
-  transition: opacity var(--transition);
-}
-.doctor-tab.active { opacity: 1; }
-.doctor-tab-avatar {
-  width: 58px; height: 58px;
-  border-radius: 50%;
-  overflow: hidden;
-  flex-shrink: 0;
-  background: var(--green-600);
-}
-.doctor-tab-avatar img { width: 100%; height: 100%; object-fit: cover; }
-.doctor-tab-name { font-family: var(--display); font-size: 1.5rem; color: var(--ink); }
-.on-dark .doctor-tab-name { color: var(--cream); }
-
-.doctors-track {
-  position: relative;
-  height: 2px;
-  background: rgba(43,51,39,0.14);
-  margin-bottom: 3.5rem;
-}
-.on-dark .doctors-track { background: rgba(242,236,218,0.18); }
-.doctors-track-fill {
-  position: absolute;
-  top: 0; left: 0;
-  height: 100%;
-  width: 50%;
-  background: var(--green-500);
-  transition: transform var(--transition), width var(--transition);
-}
-
+/* ── DOCTORS (single practitioner profile) ─────────────────── */
 .doctor-panels { position: relative; }
 .doctor-panel {
-  display: none;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
 }
-.doctor-panel.active { display: grid; }
 .doctor-quote-mark {
   font-family: var(--display);
   font-size: 5rem;
@@ -633,8 +595,6 @@ section { padding: 6.5rem 0; }
 .doctor-photo img { width: 100%; height: 100%; object-fit: cover; }
 
 @media (max-width: 900px) {
-  .doctors-tabs { gap: 1.75rem; }
-  .doctor-tab-name { font-size: 1.1rem; }
   .doctor-panel { grid-template-columns: 1fr; gap: 2rem; }
   .doctor-panel .doctor-photo { order: -1; max-width: 320px; }
 }
@@ -743,7 +703,7 @@ section { padding: 6.5rem 0; }
   border-radius: var(--radius-sm);
 }
 .product-body { padding: 1.75rem; }
-.product-body h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.product-body h3 { color: var(--ink); font-size: 1.25rem; margin-bottom: 0.5rem; }
 .product-desc { font-size: 0.92rem; color: var(--ink-muted); margin-bottom: 1.25rem; }
 .product-price { margin-bottom: 1.5rem; font-family: var(--sans); font-weight: 700; }
 .product-price .was { color: var(--ink-faint); text-decoration: line-through; margin-right: 0.6rem; font-weight: 500; }
@@ -827,7 +787,12 @@ footer.site-footer { background: var(--green-800); padding: 5rem 0 2.5rem; }
   .footer-brand-col { grid-column: 1 / -1; max-width: 100%; }
 }
 @media (max-width: 560px) {
-  .footer-top { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; text-align: center; }
+  .footer-brand-col { display: flex; flex-direction: column; align-items: center; }
+  .footer-social { justify-content: center; }
+  .footer-col { display: flex; flex-direction: column; align-items: center; }
+  .footer-col ul { align-items: center; }
+  .footer-bottom { flex-direction: column; justify-content: center; text-align: center; }
 }
 
 /* ── INNER PAGE HERO (reusable for non-home pages) ─────────── */
