@@ -1446,9 +1446,10 @@ padding: 1.8rem 3.2rem;
 
 .welcome-photo img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center bottom;
 }
 
 /* MOBILE */
