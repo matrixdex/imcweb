@@ -1251,7 +1251,7 @@ padding: 0.5rem 0;
 
   /* Make this section wider than the normal website container */
   .promise-section .container {
-    max-width: 1500px;
+max-width: 1700px;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
@@ -1262,7 +1262,6 @@ padding: 0.5rem 0;
   gap: 2rem;
   align-items: start;
 }
-  }
 
   /* Large Harley Street image */
 .promise-photo {
