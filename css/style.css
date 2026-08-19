@@ -1245,3 +1245,25 @@ padding: 0.5rem 0;
     line-height: 1.6;
   }
 }
+/* OUR PROMISE — DESKTOP REFINEMENT */
+
+@media (min-width: 1001px) {
+
+  .promise-grid {
+    grid-template-columns: 0.82fr 1.18fr;
+    gap: 2.2rem;
+  }
+
+  .promise-card {
+    padding: 2.8rem 3.2rem;
+  }
+
+  .promise-card-copy h3 {
+    font-size: clamp(2rem, 2.5vw, 2.75rem);
+  }
+
+  .promise-card:last-child .promise-card-copy h3 {
+    white-space: nowrap;
+  }
+
+}
