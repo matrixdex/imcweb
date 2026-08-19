@@ -1480,3 +1480,6 @@ padding: 1.8rem 3.2rem;
 .doctors .section-header {
   padding-top: 3rem;
 }
+.doctors .section-header .heading-block h2 {
+  margin-top: 3rem;
+}
