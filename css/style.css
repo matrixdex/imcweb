@@ -1477,3 +1477,6 @@ padding: 1.8rem 3.2rem;
 .welcome-title-nowrap {
   white-space: nowrap;
 }
+.doctors .section-header {
+  padding-top: 3rem;
+}
