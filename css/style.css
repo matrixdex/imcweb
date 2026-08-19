@@ -1381,7 +1381,7 @@ padding: 1.8rem 3.2rem;
 /* ══════════════════════ WELCOME TO IMC ══════════════════════ */
 
 .welcome-section {
-  background: var(--sand-100);
+background: var(--green-800);
   padding: 6.5rem 0;
 }
 
@@ -1402,7 +1402,7 @@ padding: 1.8rem 3.2rem;
   display: flex;
   align-items: center;
   gap: 14px;
-  color: var(--green-500);
+color: var(--cream);
   margin-bottom: 1.6rem;
 }
 
@@ -1423,7 +1423,7 @@ padding: 1.8rem 3.2rem;
   font-size: clamp(3rem, 4.5vw, 4.8rem);
   font-weight: 400;
   line-height: 1;
-  color: var(--green-800);
+color: var(--cream);
   margin-bottom: 1.6rem;
 }
 
@@ -1431,7 +1431,7 @@ padding: 1.8rem 3.2rem;
   font-family: var(--body-serif);
   font-size: 1.2rem;
   line-height: 1.7;
-  color: var(--ink-soft);
+color: var(--cream);
   margin-bottom: 2rem;
 }
 
