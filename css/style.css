@@ -1249,32 +1249,43 @@ padding: 0.5rem 0;
 
 @media (min-width: 1001px) {
 
-  /* Restore the original photo/card proportions */
+  /* Make this section wider than the normal website container */
+  .promise-section .container {
+    max-width: 1500px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  /* Match the reference proportions */
   .promise-grid {
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
     gap: 2rem;
+    align-items: stretch;
   }
 
-  /* Keep Harley Street image exactly as before */
+  /* Large Harley Street image */
   .promise-photo {
-    min-height: 620px;
+    min-height: 650px;
   }
 
-  /* Move only the two cards further right */
+  /* Remove the previous manual card shift */
   .promise-cards {
-    position: relative;
-    left: 35px;
-    width: calc(100% - 35px);
+    position: static;
+    left: auto;
+    width: auto;
+    gap: 1rem;
   }
 
+  /* Larger, wider cream boxes */
   .promise-card {
-    padding: 2.8rem 3.2rem;
+    padding: 2.7rem 3.2rem;
   }
 
   .promise-card-copy h3 {
-    font-size: clamp(2rem, 2.5vw, 2.75rem);
+    font-size: clamp(2rem, 2.6vw, 2.8rem);
   }
 
+  /* Keep this heading on one line */
   .promise-card:last-child .promise-card-copy h3 {
     white-space: nowrap;
   }
