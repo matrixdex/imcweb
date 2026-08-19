@@ -1373,3 +1373,99 @@ padding: 1.8rem 3.2rem;
     margin-right: 0;
   }
 }
+/* ══════════════════════ WELCOME TO IMC ══════════════════════ */
+
+.welcome-section {
+  background: var(--sand-100);
+  padding: 6.5rem 0;
+}
+
+.welcome-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* TEXT */
+
+.welcome-copy {
+  max-width: 520px;
+}
+
+.welcome-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--green-500);
+  margin-bottom: 1.6rem;
+}
+
+.welcome-divider span:first-child,
+.welcome-divider span:last-child {
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: currentColor;
+}
+
+.welcome-star {
+  font-size: 0.9rem;
+}
+
+.welcome-copy h2 {
+  font-family: var(--display);
+  font-size: clamp(3rem, 4.5vw, 4.8rem);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--green-800);
+  margin-bottom: 1.6rem;
+}
+
+.welcome-copy p {
+  font-family: var(--body-serif);
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin-bottom: 2rem;
+}
+
+/* INTERIOR PHOTO — FULL IMAGE, NO CROPPING */
+
+.welcome-photo {
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.welcome-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .welcome-section {
+    padding: 4.5rem 0;
+  }
+
+  .welcome-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .welcome-photo {
+    order: -1;
+  }
+
+  .welcome-copy {
+    max-width: none;
+  }
+
+  .welcome-copy h2 {
+    font-size: 3rem;
+  }
+}
