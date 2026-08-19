@@ -1249,9 +1249,22 @@ padding: 0.5rem 0;
 
 @media (min-width: 1001px) {
 
+  /* Restore the original photo/card proportions */
   .promise-grid {
-    grid-template-columns: 0.82fr 1.18fr;
-    gap: 2.2rem;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 2rem;
+  }
+
+  /* Keep Harley Street image exactly as before */
+  .promise-photo {
+    min-height: 620px;
+  }
+
+  /* Move only the two cards further right */
+  .promise-cards {
+    position: relative;
+    left: 35px;
+    width: calc(100% - 35px);
   }
 
   .promise-card {
