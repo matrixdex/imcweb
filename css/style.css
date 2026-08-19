@@ -1274,11 +1274,13 @@ padding: 0.5rem 0;
     left: auto;
     width: auto;
     gap: 1rem;
+   justify-content: flex-start;
   }
 
   /* Larger, wider cream boxes */
   .promise-card {
-    padding: 2.7rem 3.2rem;
+flex: 0 0 auto;
+padding: 2.2rem 3.2rem;
   }
 
   .promise-card-copy h3 {
