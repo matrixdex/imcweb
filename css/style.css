@@ -1439,7 +1439,7 @@ padding: 1.8rem 3.2rem;
 
 .welcome-photo {
   width: 100%;
-   transform: translateX(6rem);
+   transform: translateX(18rem);
   overflow: hidden;
   border-radius: var(--radius-md);
    aspect-ratio: 1 / 1;
