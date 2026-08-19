@@ -1469,3 +1469,6 @@ padding: 1.8rem 3.2rem;
     font-size: 3rem;
   }
 }
+.welcome-title-nowrap {
+  white-space: nowrap;
+}
