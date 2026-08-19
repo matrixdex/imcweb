@@ -1299,3 +1299,77 @@ padding: 1.8rem 3.2rem;
   }
 
 }
+/* ══════════════════════ HEALTHIER STRIP ══════════════════════ */
+
+.healthier-strip {
+  background: var(--sand-100);
+  padding: 1.4rem 0;
+}
+
+.healthier-strip-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 105px;
+}
+
+.healthier-strip-copy {
+  margin-left: 6rem;
+}
+
+.healthier-strip-copy p {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 2.2vw, 2.5rem);
+  line-height: 1.1;
+  color: var(--green-800);
+  font-weight: 400;
+}
+
+.healthier-strip-copy em {
+  color: var(--green-500);
+  font-style: italic;
+}
+
+.healthier-strip-btn {
+  margin-right: 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--green-800);
+  color: var(--cream);
+
+  padding: 0.9rem 2.2rem;
+  border-radius: 100px;
+
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  transition: var(--transition);
+}
+
+.healthier-strip-btn:hover {
+  background: var(--green-700);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 800px) {
+  .healthier-strip-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    min-height: auto;
+  }
+
+  .healthier-strip-copy {
+    margin-left: 0;
+  }
+
+  .healthier-strip-btn {
+    margin-right: 0;
+  }
+}
