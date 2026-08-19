@@ -951,7 +951,7 @@ footer.site-footer { background: var(--green-800); padding: 5rem 0 2.5rem; }
 }/* ── QUICK INFO STRIP ─────────────────────────────────────── */
 
 .quick-info {
-  padding: 1.5rem 0;
+padding: 0.5rem 0;
   background: var(--green-200);
 }
 
