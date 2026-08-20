@@ -865,6 +865,7 @@ margin-bottom: 0.75rem;
   border-radius: var(--radius-md);
   overflow: hidden;
 flex: 1;
+   min-height: 0;
   box-shadow: var(--shadow-md);
 }
 .visit-photo img {
