@@ -807,7 +807,7 @@ margin-bottom: 0.75rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
-  align-items: start;
+ align-items: stretch;
 }
 .visit-info h2 { margin-bottom: 1.25rem; }
 .visit-info > p { color: var(--ink-muted); font-size: 1.08rem; max-width: 460px; }
@@ -864,7 +864,7 @@ margin-bottom: 0.75rem;
 .visit-photo {
   border-radius: var(--radius-md);
   overflow: hidden;
-  aspect-ratio: 3 / 2;
+flex: 1;
   box-shadow: var(--shadow-md);
 }
 .visit-photo img {
