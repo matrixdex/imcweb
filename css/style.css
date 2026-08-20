@@ -688,9 +688,8 @@ margin-bottom: 1.25rem;
   position: relative;
   overflow: hidden;
   margin-bottom: 4rem;
-  width: min(1600px, calc(100vw - 48px));
-  left: 50%;
-  transform: translateX(-50%);
+ width: calc(100vw - 32px);
+margin-left: calc(50% - 50vw + 16px);
 }
 }.products-hero img {
   width: 100%;
