@@ -1495,7 +1495,7 @@ color: var(--cream);
 
 .welcome-photo {
   width: 100%;
-   transform: translateX(18rem);
+   transform: translateX(10rem);
   overflow: hidden;
   border-radius: var(--radius-md);
    aspect-ratio: 1 / 1;
