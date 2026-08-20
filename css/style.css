@@ -688,8 +688,8 @@ margin-bottom: 1.25rem;
   position: relative;
   overflow: hidden;
   margin-bottom: 4rem;
- width: calc(100vw - 32px);
-margin-left: calc(50% - 50vw + 16px);
+width: 100%;
+margin-left: 0;
 }
 .products-hero img {
   width: 100%;
