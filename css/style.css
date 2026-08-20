@@ -1319,20 +1319,20 @@ max-width: 1700px;
 
   /* Match the reference proportions */
  .promise-grid {
-  grid-template-columns: 740px minmax(0, 1fr);
+grid-template-columns: 800px minmax(0, 1fr);
   gap: 2rem;
   align-items: start;
 }
 
   /* Large Harley Street image */
 .promise-photo {
-  width: 740px;
+width: 800px;
   height: 750px;
   min-height: 750px;
 }
 
 .promise-location {
-  width: 740px;
+  width: 800px;
 }
 
   /* Remove the previous manual card shift */
