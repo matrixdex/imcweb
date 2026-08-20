@@ -1327,8 +1327,8 @@ grid-template-columns: 800px minmax(0, 1fr);
   /* Large Harley Street image */
 .promise-photo {
 width: 800px;
-  height: 750px;
-  min-height: 750px;
+ height: 590px;
+min-height: 590px;
 }
 
 .promise-location {
