@@ -691,7 +691,7 @@ margin-bottom: 1.25rem;
  width: calc(100vw - 32px);
 margin-left: calc(50% - 50vw + 16px);
 }
-}.products-hero img {
+.products-hero img {
   width: 100%;
   display: block;
 }
