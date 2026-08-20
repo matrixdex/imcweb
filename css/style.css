@@ -864,15 +864,16 @@ margin-bottom: 0.75rem;
 .visit-photo {
   border-radius: var(--radius-md);
   overflow: hidden;
-flex: 1;
-   min-height: 0;
+flex: 0 0 420px;
+  min-height: 0;
   box-shadow: var(--shadow-md);
+
 }
 .visit-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-object-position: center 82%;
+  object-position: center bottom;
   display: block;
 }
 .visit-map-btn { width: 100%; }
