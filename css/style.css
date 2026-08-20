@@ -1501,6 +1501,11 @@ color: var(--cream);
    aspect-ratio: 1 / 1;
 }
 
+@media (min-width: 1600px) {
+  .welcome-photo {
+    transform: translateX(14rem);
+  }
+}
 .welcome-photo img {
   width: 100%;
   height: 100%;
