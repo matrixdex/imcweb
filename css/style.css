@@ -609,13 +609,14 @@ padding: 11rem 0 0rem;
 .clinics-track-wrap { overflow: hidden; border: 1px solid var(--sand-300); }
 .clinics-track {
   display: flex;
+   flex-wrap: wrap;
   transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
 }
 .clinic-card {
-flex: 0 0 calc(100% / 7);
+flex: 0 0 25%;
   background: var(--sand-150);
-padding: 2rem 1rem;
-min-height: 520px;
+padding: 2.5rem 2rem;
+min-height: 400px;
   display: flex;
   flex-direction: column;
   border-right: 1px solid var(--sand-300);
@@ -633,9 +634,9 @@ margin-bottom: 1.25rem;
   -webkit-text-stroke: 0;
   color: var(--sand-100);
 }
-.clinic-card h3 { color: var(--ink); font-size: 1.15rem; margin-bottom: 1rem; }
+.clinic-card h3 { color: var(--ink); font-size: 1.4rem; margin-bottom: 1rem; }
 .clinic-card.active h3 { color: var(--cream); }
-.clinic-card p { color: var(--ink-muted); font-size: 0.84rem; line-height: 1.6; }
+.clinic-card p { color: var(--ink-muted); font-size: 1rem; line-height: 1.6; }
 .clinic-card.active p { color: var(--sand-300); }
 .clinic-card p + p { margin-top: 1.1rem; }
 
@@ -647,6 +648,9 @@ margin-bottom: 1.25rem;
   .clinic-card { flex: 0 0 100%; border-right: none; min-height: 0; }
 }
 @media (min-width: 1101px) {
+     .clinics .container {
+    max-width: 1600px;
+  }
   .clinics .arrow-controls {
     display: none;
   }
