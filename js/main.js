@@ -89,7 +89,7 @@ if (clinicsTrack && clinicPrev && clinicNext) {
     const w = window.innerWidth;
     if (w <= 620) return 1;
     if (w <= 1100) return 2;
-    return 4;
+return 8;
   }
 
   function updateClinics() {
