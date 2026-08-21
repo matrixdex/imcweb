@@ -1550,3 +1550,261 @@ color: var(--cream);
 .doctors .section-header .heading-block h2 {
   margin-top: 3rem;
 }
+/* ══════════════════════ MOBILE HOMEPAGE CLEANUP ══════════════════════ */
+@media (max-width: 700px) {
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  section {
+    padding: 4rem 0;
+  }
+
+  /* NAV */
+  .nav-inner,
+  #nav.scrolled .nav-inner {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 8rem 0 3.5rem;
+  }
+
+  .hero .container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 1rem;
+  }
+
+  .hero-copy h1 {
+    font-size: 2.75rem;
+    line-height: 1.02;
+  }
+
+  .hero-copy p {
+    max-width: none;
+    font-size: 1rem;
+    margin: 1.5rem 0 2rem;
+  }
+
+  /* QUICK INFO */
+  .quick-info-card {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+
+  /* HEALTHIER STRIP */
+  .healthier-strip-inner {
+    align-items: stretch;
+  }
+
+  .healthier-strip-copy p {
+    font-size: 1.8rem;
+  }
+
+  .healthier-strip-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* WELCOME */
+  .welcome-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .welcome-photo {
+    order: -1;
+    transform: none !important;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .welcome-title-nowrap {
+    white-space: normal;
+  }
+
+  .welcome-copy h2 {
+    font-size: 2.75rem;
+  }
+
+  .welcome-copy p {
+    font-size: 1.05rem;
+  }
+
+  /* OUR PROMISE */
+  .promise-heading h2 {
+    font-size: 2.8rem;
+  }
+
+  .promise-photo {
+    flex: none;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: 4 / 3;
+  }
+
+  .promise-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .promise-card {
+    grid-template-columns: 1fr;
+    padding: 1.75rem 1.25rem;
+    gap: 1rem;
+  }
+
+  .promise-card-copy h3 {
+    font-size: 2rem;
+  }
+
+  .promise-address {
+    font-size: 1.25rem;
+  }
+
+  /* DOCTOR */
+  .doctor-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-panel .doctor-photo {
+    width: 100%;
+    max-width: 100%;
+    order: -1;
+  }
+
+  .doctors .section-header {
+    padding-top: 0;
+  }
+
+  .doctors .section-header .heading-block h2 {
+    margin-top: 0;
+  }
+
+  /* WHAT WE OFFER */
+  .clinics-track {
+    display: block;
+  }
+
+  .clinic-card {
+    width: 100%;
+    flex: none;
+    min-height: 0;
+    padding: 2rem 1.5rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--sand-300);
+  }
+
+  .clinic-card:last-child {
+    border-bottom: 0;
+  }
+
+  /* PRODUCTS */
+  .products-hero {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .products-hero img {
+    width: 100%;
+    height: auto;
+  }
+
+  .products-hero-copy {
+    position: static;
+    transform: none;
+    width: 100%;
+    padding: 1.25rem 0 0;
+  }
+
+  .products-hero-copy h2 {
+    font-size: 2rem;
+  }
+
+  .products-hero-copy p {
+    font-size: 1rem;
+  }
+
+  .products-hero-btn {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-footer {
+    flex-wrap: wrap;
+  }
+
+  .product-footer .btn {
+    width: 100%;
+  }
+
+  /* VISIT THE CLINIC */
+  .visit {
+    padding: 4.5rem 0;
+  }
+
+  .visit-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .visit-map {
+    width: 100%;
+  }
+
+  .visit-photo {
+    flex: none;
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .visit-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+  }
+
+  .visit-info > .btn,
+  .visit-map-btn {
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  /* PREVENT LONG HEADINGS OVERFLOWING */
+  h1,
+  h2,
+  h3 {
+    overflow-wrap: break-word;
+  }
+}
