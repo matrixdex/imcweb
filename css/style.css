@@ -1800,7 +1800,13 @@ color: var(--cream);
     text-align: center;
     line-height: 1.3;
   }
-
+/* REMOVE DELAYED IMAGE REVEAL ON MOBILE */
+.welcome-grid.reveal,
+.promise-grid.reveal {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
   /* PREVENT LONG HEADINGS OVERFLOWING */
   h1,
   h2,
