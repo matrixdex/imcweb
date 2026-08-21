@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/style.css?v=29" />
+<link rel="stylesheet" href="css/style.css?v=20" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
 <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 <script src="js/hero-molecule.js" defer></script>
@@ -20,24 +20,22 @@
   <div class="nav-inner">
     <div class="brand-block">
       <a href="index.html" class="brand-mark" aria-label="Integrated Medical Centre home">
-        <img src="assets/imc-logo2.png" alt="Integrated Medical Centre" class="brand-mark-img" />
+        <img src="./assets/imc-logo2.png" alt="Integrated Medical Centre" class="brand-mark-img" />
       </a>
      <span class="brand-subtitle"><em>The leading name in ethical medicine</em></span>
     </div>
 
 <ul class="nav-links" id="navLinks">
-  <li><a href="pages/about.html" class="nav-link">About Us</a></li>
+  <li><a href="#about" class="nav-link">About Us</a></li>
   <li><a href="#clinics" class="nav-link">Services</a></li>
   <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-  <li><a href="pages/shop.html" class="nav-link">Shop</a></li>
-  <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+  <li><a href="#wellness-collection" class="nav-link">Shop</a></li>
+  <li><a href="#contact" class="nav-link">Contact</a></li>
 </ul>
 
     <div class="nav-right">
-      <a href="pages/cart.html" class="nav-cart" aria-label="View cart, 0 items">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h16l-1.5 11a2 2 0 01-2 1.7H7.5a2 2 0 01-2-1.7L4 8z"/><path d="M8 8V6a4 4 0 018 0v2"/></svg>
-      </a>
-    <a href="pages/contact.html" class="btn btn-fill nav-cta">Request Appointment</a>
+      
+    <a href="#contact" class="btn btn-fill nav-cta">Appointment</a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -53,8 +51,8 @@
     </div>
 
     <div class="hero-copy reveal">
-<h1>Integrated Medical Centre</h1>
-<p>Established almost a century ago by the visionary Dr. Abdul Hameed, Integrated Medical Centre (IMC) has been at the forefront of blending conventional, complementary, and traditional medicine.</p>      <a href="pages/about.html" class="btn btn-fill">Learn More</a>
+<h1>Integrated<br>Medical<br>Centre</h1>
+<p>Established almost a century ago by the visionary Dr. Abdul Hameed, Integrated Medical Centre (IMC) has been at the forefront of blending conventional, complementary, and traditional medicine.</p>      <a href="#contact" class="btn btn-fill">Visit</a>
     </div>
   </div>
 </section>
@@ -64,16 +62,16 @@
       <div class="quick-info-card">
         <div class="quick-info-title">Opening Hours</div>
         <div class="quick-info-detail">Monday - Saturday</div>
-        <div class="quick-info-subdetail">9AM - 7PM</div>
+        <div class="quick-info-detail">9AM - 7PM</div>
       </div>
 
-      <div class="quick-info-card quick-info-card-dark">
+      <div class="quick-info-card">
         <div class="quick-info-title">Call Now</div>
-        <div class="quick-info-detail">+44 20 7224 5111</div>
+        <a href="tel:+442072245111"><div class="quick-info-detail">+44 207-224-5111</div></a>
       </div>
 
-      <a href="pages/contact.html" class="quick-info-card quick-info-link">
-        <div class="quick-info-title">Online Appointment</div>
+      <a href="#contact" class="quick-info-card quick-info-link">
+        <div class="quick-info-title">Appointment</div>
         <div class="quick-info-detail">Book Now</div>
       </a>
     </div>
@@ -90,7 +88,7 @@
       </p>
     </div>
 
-    <a href="pages/about.html#imran" class="healthier-strip-btn">
+    <a href="#practitioner" class="healthier-strip-btn">
       Meet Dr Ali
     </a>
 
@@ -112,24 +110,23 @@
         </div>
 
         <h2>
-  Welcome to<br>
+
   <span class="welcome-title-nowrap">Integrated Medical Centre</span>
 </h2>
 
         <p>
-          We are proud our foundation is built on...
+          In the beginning, Dr. A. Hameed integrated traditional Unani medicine and natural opiates for pain management. His daughter Ambia Khatun cared for the poor and needy compassionately. Her son Dr. Imran Ali integrates modern medicine with a historic and natural approach. 
         </p>
+        <p>3 generations of the Ali family practice this evolving treatise of medicine, the Ali Technique. </p>
 
-        <a href="pages/about.html" class="btn btn-fill">
-          Read More
-        </a>
+        
 
       </div>
 
       <!-- Interior -->
       <div class="welcome-photo">
         <img
-src="assets/harley-street.jpg"
+src="./assets/nmarket.jpeg"
           alt="Interior of Integrated Medical Centre"
           loading="lazy"
         />
@@ -159,7 +156,7 @@ src="assets/harley-street.jpg"
       <div class="promise-location">
         <div class="promise-photo">
           <img
-src="assets/imc-interior.jpg"
+src="./assets/hs.jpeg"
             alt="Harley Street, London"
             loading="lazy"
           />
@@ -243,7 +240,7 @@ src="assets/imc-interior.jpg"
   </div>
 </section>
 
-<section class="doctors bg-dark on-dark">
+<section class="doctors bg-dark on-dark" id="practitioner">
   <div class="container">
     
     
@@ -256,13 +253,13 @@ src="assets/imc-interior.jpg"
       <div class="doctor-panel active" data-doctor-panel="imran">
         <div class="doctor-panel-copy">
           <div class="doctor-quote-mark">&rdquo;</div>
-          <p class="doctor-quote">It's my goal to provide relaxed, friendly and inviting care. I want my patients to feel that I am listening to them and addressing their problems and helping them. I always try to be a good listener and to be adaptive. No one treatment always fits every patient. This is why I go beyond my way to help.</p>
+          <p class="doctor-quote">"It's my goal to provide relaxed, friendly and inviting care. I want my patients to feel that I am listening to them and addressing their problems and helping them. I always try to be a good listener and to be adaptive. No one treatment always fits every patient. This is why I go beyond my way to help."</p>
           <p class="doctor-bio">Mr. Ali is well recognized for his 'Integrated treatment approach'. He is hugely popular among his patients and like-minded colleagues for providing tailored Osteopathic and Naturopathic treatments for individual's needs; with his vast experience in managing Neuro-Muscular and Systemic Disorders, he uses a unique, time-tested, blend of traditional and natural healing techniques to improve health and wellbeing of his patients across the globe over two decades.</p>
-          <a href="pages/about.html#imran" class="btn btn-fill">Learn More</a>
+          
         </div>
        <div class="doctor-photo">
   <img
-src="assets/dr-imran-ali.png?v=2"
+src="./assets/dr-imran-ali.png?v=2"
     alt="Dr Imran Ali"
     loading="lazy"
   />
@@ -374,12 +371,12 @@ src="assets/dr-imran-ali.png?v=2"
 <!-- ══════════════════════ PRODUCTS ══════════════════════ -->
 <section class="products bg-dark on-dark" id="products">
   <div class="container">
-    <div class="products-hero">
-<img src="assets/Products final.png" alt="Dr Ali's Wellness Collection" />
+    <div class="products-hero" id="wellness-collection">
+<img src="./assets/Products final.png" alt="Dr Ali's Wellness Collection" />
       <div class="products-hero-copy">
   <h2>Discover Dr Ali's Wellness Collection</h2>
   <p>Formulated with care, backed by science, and made for daily living.</p>
-  <a href="#product-list" class="products-hero-btn">SHOP NOW</a>
+  
 </div>
 </div>
     <div class="section-header reveal">
@@ -394,15 +391,14 @@ src="assets/dr-imran-ali.png?v=2"
       <div class="product-card reveal">
         <div class="product-media">
           <span class="product-badge">Popular</span>
-          <img src="assets/joint-support-oil.png" alt="Dr Ali's Joint Support Oil" class="product-image" />
+          <img src="./assets/joint-support-oil.png" alt="Dr Ali's Joint Support Oil" class="product-image" />
         </div>
         <div class="product-body">
           <h3>Joint Support Oil</h3>
 <p class="product-desc">Blend of natural oils for inflammation of muscles, ligaments &amp; joints</p>
-<div class="product-price"><span class="was">£35</span><span class="now">£30</span></div>›
+<div class="product-price"><span class="was">£35</span><span class="now">£30</span></div>
           <div class="product-footer">
-            <a href="pages/shop.html#oils" class="btn-text">Learn More</a>
-            <button class="btn btn-fill">Add to cart</button>
+            <!-- <a href="pages/shop.html#oils" class="btn-text">Learn More</a> -->
           </div>
         </div>
       </div>
@@ -410,15 +406,14 @@ src="assets/dr-imran-ali.png?v=2"
       <div class="product-card reveal">
         <div class="product-media">
           <span class="product-badge">Popular</span>
-          <img src="assets/detox-powder.png" alt="Detox Powder" class="product-image" />
+          <img src="./assets/detox-powder.png" alt="Detox Powder" class="product-image" />
         </div>
         <div class="product-body">
           <h3>Detox Powder</h3>
 <p class="product-desc">A blend of time tested traditional ingredients to maintain a healthy gut</p>
 <div class="product-price"><span class="was">£35</span><span class="now">£30</span></div>
           <div class="product-footer">
-            <a href="pages/shop.html#supplements" class="btn-text">Learn More</a>
-            <button class="btn btn-fill">Add to cart</button>
+            <!-- <a href="pages/shop.html#supplements" class="btn-text">Learn More</a> -->
           </div>
         </div>
       </div>
@@ -426,15 +421,14 @@ src="assets/dr-imran-ali.png?v=2"
       <div class="product-card reveal">
         <div class="product-media">
           <span class="product-badge">Popular</span>
-          <img src="assets/breakfast-mewa.png" alt="Breakfast Mewa" class="product-image" />
+          <img src="./assets/breakfast-mewa.png" alt="Breakfast Mewa" class="product-image" />
         </div>
         <div class="product-body">
-
-         <h3>Breakfast Mewa</h3>
+          <h3>Breakfast Mewa</h3>
 <p class="product-desc">Handcrafted Superfood of Ancient India</p>
 <div class="product-price"><span class="was">£50</span><span class="now">£45</span></div>
-            <a href="pages/shop.html#vitamins" class="btn-text">Learn More</a>
-            <button class="btn btn-fill">Add to cart</button>
+          <div class="product-footer">
+            <!-- <a href="pages/shop.html#vitamins" class="btn-text">Learn More</a> -->
           </div>
         </div>
       </div>
@@ -449,9 +443,9 @@ src="assets/dr-imran-ali.png?v=2"
   <div class="container">
     <div class="visit-grid">
       <div class="visit-info reveal">
-        <span class="eyebrow">Find Us</span>
+        
         <h2>Visit The Clinic</h2>
-        <p>Our practice sits on Harley Street, in the heart of London's medical district. Appointments are by arrangement &mdash; call or email us and we will find a time that suits you.</p>
+        <p>Our practice sits on Harley Street, in the heart of London's medical district</p>
 
         <div class="visit-details">
           <div class="visit-detail">
@@ -485,12 +479,12 @@ src="assets/dr-imran-ali.png?v=2"
           </div>
         </div>
 
-        <a href="pages/contact.html" class="btn btn-fill">Contact Us For More Information</a>
+        
       </div>
 
       <div class="visit-map reveal">
         <div class="visit-photo">
-       <img src="assets/harley-st-property.jpg" alt="The entrance to Integrated Medical Centre at 75 Harley Street, London" />
+          <img src="./assets/cl.jpeg" alt="The entrance to Integrated Medical Centre at 75 Harley Street, London" />
         </div>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=75+Harley+Street+London"
            target="_blank" rel="noopener noreferrer"
@@ -508,7 +502,7 @@ src="assets/dr-imran-ali.png?v=2"
     <div class="footer-top">
       <div class="footer-brand-col">
         <a href="index.html" class="brand-mark" aria-label="Integrated Medical Centre home">
-          <img src="assets/imc-logo.png" alt="Integrated Medical Centre" class="brand-mark-logo" />
+          <img src="./assets/imc-logo.png" alt="Integrated Medical Centre" class="brand-mark-logo" />
         </a>
         <div class="footer-social">
           <a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8.5z"/></svg>LinkedIn</a>

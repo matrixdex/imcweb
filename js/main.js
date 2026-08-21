@@ -13,6 +13,7 @@ if (navToggle && navLinks) {
   navToggle.addEventListener('click', () => {
     const isOpen = navLinks.classList.toggle('mobile-open');
     navToggle.setAttribute('aria-expanded', isOpen);
+    nav.classList.toggle('menu-open', isOpen);
   });
 }
 
@@ -89,13 +90,16 @@ if (clinicsTrack && clinicPrev && clinicNext) {
     const w = window.innerWidth;
     if (w <= 620) return 1;
     if (w <= 1100) return 2;
-return 8;
+    return 4;
   }
 
+  // Paged, not a 1-card slide: each click advances by a full "page" of
+  // perView cards, so at 4-per-view (wide screens) 8 cards make exactly
+  // 2 pages — 2 clicks of Next end the carousel.
   function updateClinics() {
     const perView = visibleCount();
     const maxIndex = Math.max(0, cards.length - perView);
-    clinicIndex = Math.min(clinicIndex, maxIndex);
+    clinicIndex = Math.floor(Math.min(clinicIndex, maxIndex) / perView) * perView;
     const cardWidth = clinicsTrack.parentElement.clientWidth / perView;
     clinicsTrack.style.transform = `translateX(-${clinicIndex * cardWidth}px)`;
     clinicPrev.disabled = clinicIndex === 0;
@@ -104,11 +108,15 @@ return 8;
     cards.forEach((card, i) => card.classList.toggle('active', i === clinicIndex));
   }
 
-  clinicPrev.addEventListener('click', () => { clinicIndex = Math.max(0, clinicIndex - 1); updateClinics(); });
+  clinicPrev.addEventListener('click', () => {
+    const perView = visibleCount();
+    clinicIndex = Math.max(0, clinicIndex - perView);
+    updateClinics();
+  });
   clinicNext.addEventListener('click', () => {
     const perView = visibleCount();
     const maxIndex = Math.max(0, cards.length - perView);
-    clinicIndex = Math.min(maxIndex, clinicIndex + 1);
+    clinicIndex = Math.min(maxIndex, clinicIndex + perView);
     updateClinics();
   });
   window.addEventListener('resize', updateClinics);
