@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/style.css?v=20" />
+<link rel="stylesheet" href="css/style.css?v=22" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
 <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 <script src="js/hero-molecule.js" defer></script>
@@ -22,11 +22,12 @@
       <a href="index.html" class="brand-mark" aria-label="Integrated Medical Centre home">
         <img src="./assets/imc-logo2.png" alt="Integrated Medical Centre" class="brand-mark-img" />
       </a>
-     <span class="brand-subtitle"><em>The leading name in ethical medicine</em></span>
+     <span class="brand-subtitle"><em>the leading name in ethical medicine</em></span>
     </div>
 
 <ul class="nav-links" id="navLinks">
   <li><a href="#about" class="nav-link">About Us</a></li>
+  
   <li><a href="#clinics" class="nav-link">Services</a></li>
   <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
   <li><a href="#products" class="nav-link">Shop</a></li>
@@ -35,10 +36,7 @@
 
     <div class="nav-right">
       
-    <a href="#contact" class="btn btn-fill nav-cta">Appointment</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+    
     </div>
   </div>
 </nav>
@@ -51,8 +49,8 @@
     </div>
 
     <div class="hero-copy reveal">
-<h1>Integrated<br>Medical<br>Centre</h1>
-<p>Established a century ago by Dr. Abdul Hameed, Integrated Medical Centre integrates conventional, complementary and traditional medicines</p>      <a href="#contact" class="btn btn-fill">Visit</a>
+<h1>Integrated Medical Centre</h1>
+<p>Established almost a century ago by visionary Dr. Abdul Hameed, Integrated Medical Centre (IMC) has been at the forefront of blending conventional, complementary, and traditional medicine.</p>      <a href="#about" class="btn btn-fill">Read More</a>
     </div>
   </div>
 </section>
@@ -61,8 +59,16 @@
     <div class="quick-info-grid">
       <div class="quick-info-card">
         <div class="quick-info-title">Opening Hours</div>
-        <div class="quick-info-detail">Monday - Saturday</div>
-        <div class="quick-info-detail">9AM - 7PM</div>
+        <div class="quick-info-hours">
+          <div class="quick-info-hours-col">
+            <div class="quick-info-detail">Monday - Friday</div>
+            <div class="quick-info-detail">9AM - 7PM</div>
+          </div>
+          <div class="quick-info-hours-col">
+            <div class="quick-info-detail">Saturday</div>
+            <div class="quick-info-detail">9AM - 2PM</div>
+          </div>
+        </div>
       </div>
 
       <div class="quick-info-card">
@@ -70,7 +76,8 @@
         <a href="tel:+442072245111"><div class="quick-info-detail">+44 207-224-5111</div></a>
       </div>
 
-      <a href="#contact" class="quick-info-card quick-info-link">
+      <div class="quick-info-card">
+        <a href="mailto:enquiries@theintegratedmed.com?subject=Appointment%20Enquiry">
         <div class="quick-info-title">Appointment</div>
         <div class="quick-info-detail">Book Now</div>
       </a>
@@ -84,7 +91,7 @@
     <div class="healthier-strip-copy">
       <p>
         You look healthy.<br>
-        You could <em>look healthier.</em>
+        You could <em>be healthier.</em>
       </p>
     </div>
 
@@ -103,13 +110,13 @@
       <div class="welcome-copy">
         <h2><span class="welcome-title-nowrap">Integrated Medical Centre</span></h2>
         <p>
-          In the beginning, Dr. A. Hameed integrated traditional Unani medicine and natural opiates for pain management. His daughter Ambia Khatun cared for the poor and needy compassionately. Her son Dr. Imran Ali integrates modern medicine with a historic and natural approach.
+          Under the leadership of Dr. Imran Ali, the Integrated Medical Centre (IMC) has expanded beyond its original roots, making a significant impact across the globe as a pioneer in Integrated Medicine. Dr. Ali was instrumental in establishing the Integrated Medical Centre in London's prestigious medical district, where he introduced a range of innovative treatments that have set new standards in evidence-based healthcare. This expansion was driven by his vision to merge the best practices from conventional, complementary, and traditional medicine, creating a unique healing environment. 
         </p>
-        <p>3 generations of the Ali family practice this evolving treatise of medicine, the Ali Technique.</p>
+        <p>By assembling a diverse team of top-tier specialists, Dr. Ali ensured that each patient's care was personalised and deeply rooted in a complete understanding of health and wellness.</p>
       </div>
       <div class="welcome-photo">
         <img
-src="./assets/nmarket.jpeg"
+src="./assets/hs3.jpeg"
           alt="Interior of Integrated Medical Centre"
           loading="lazy"
         />
@@ -120,15 +127,15 @@ src="./assets/nmarket.jpeg"
     <div class="welcome-row reveal">
       <div class="welcome-photo">
         <img
-src="./assets/hs2.jpg"
+src="./assets/op.jpg"
           alt="Ambia Khatun's community practice"
           loading="lazy"
         />
       </div>
       <div class="welcome-copy">
-        <h2>British Legacy of Integrated Medicine</h2>
+        <h2>Our Philosophy</h2>
         <p>
-          Continuing our heritage of integrating Eastern and Western medicines, IMC was estalished in Delhi and London in 1990. New-age osteopathy and neuro-muscular rehabilitation techniques combined with age-old natural formulations bring the best of medicine throughout the ages, to London's prestigious medical district, Harley Street.</p>
+          At IMC, we are dedicated to treat the whole person - not just their symptoms and signs - by addressing root causes and empowering our patients throughout their health journey. Our unique approach merges evidence-based medicine with natural treatment, emphasising preventative care and crafting personalised treatment plans tailored to meet each individual's specific needs. This comprehensive methodology ensures that every aspect of our patients' well-being is considered and nurtured.</p>
           <p>IMC is now located at 75 Harley Street, London and led by Dr. Imran Ali.</p>
       </div>
     </div>
@@ -136,15 +143,15 @@ src="./assets/hs2.jpg"
     <!-- Row 3: text left, image right -->
     <div class="welcome-row reveal">
       <div class="welcome-copy">
-        <h2>Ethical Medicine that Works</h2>
+        <h2>Embracing Innovation</h2>
         <p>
-          Ethical medicine is the core of Dr. Imran Ali's vision for IMC. Patients are counselled on effective treatments keeping their conditions into account. Fast effective treatments are the reason for our continued existence in the health and wellness space for over 30 years. 
+          In line with global trends and advancements, IMC has embraced digitalisation to enhance patient care. Our state-of-the-art facility integrates the latest technologies to deliver innovative treatments, prioritising both safety and comfort. By adopting these advancements, we ensure that our patients receive the most effective and efficient care available.
         </p>
-        <p>Three generations on, IMC today combines the cutting-edge with time-tested natural healing.</p>
+        <p> Our commitment to integrating modern technology reflects our dedication to providing exceptional healthcare tailored to the evolving needs of our patients.</p>
       </div>
       <div class="welcome-photo">
         <img
-src="./assets/hs3.jpeg"
+src="./assets/inn.jpeg"
           alt="Integrated Medical Centre on Harley Street today"
           loading="lazy"
         />
@@ -265,7 +272,7 @@ src="./assets/dr-imran-ali.png?v=2"
     </div>
     <div class="testimonial-copy reveal">
       
-      <h2>Client<br>Testimonials</h2>
+      <h2>Testimonials</h2>
       <div class="testimonial-name" id="testiName">James R.</div>
       <div class="testimonial-role" id="testiRole">Long-term Patient</div>
       <div class="testimonial-quote-mark">&rdquo;</div>
@@ -285,14 +292,13 @@ src="./assets/dr-imran-ali.png?v=2"
 <!-- ══════════════════════ PRODUCTS ══════════════════════ -->
 <section class="products bg-dark on-dark" >
   <div class="container">
+    <div class="products-hero-caption reveal">
+      <h2>Discover Dr Ali's Wellness Collection</h2>
+      <p>Formulated with care, backed by science, and made for daily living.</p>
+    </div>
     <div class="products-hero" id="wellness-collection">
-<img src="./assets/Products final.png" alt="Dr Ali's Wellness Collection" />
-      <div class="products-hero-copy">
-  <h2>Discover Dr Ali's Wellness Collection</h2>
-  <p>Formulated with care, backed by science, and made for daily living.</p>
-  
-</div>
-</div>
+      <img src="./assets/Products final.png" alt="Dr Ali's Wellness Collection" />
+    </div>
     <div class="section-header reveal" id="products">
       <div class="heading-block">
         
