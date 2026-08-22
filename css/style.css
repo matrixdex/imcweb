@@ -597,12 +597,12 @@ section { padding: 6.5rem 0; }
 }
 .healthier-strip-copy p {
   font-family: var(--display);
-  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  font-size: clamp(2rem, 2.6vw, 3.2rem);
   color: var(--ink);
   font-weight: 300;
   line-height: 1.4;
 }
-.healthier-strip-copy em { font-style: italic; color: var(--green-600); }
+.healthier-strip-copy em { font-style: italic; color: var(--green-600); font-weight: 700;}
 .healthier-strip-btn {
   flex-shrink: 0;
   display: inline-flex;
@@ -652,11 +652,31 @@ section { padding: 6.5rem 0; }
 }
 .welcome-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
+/* Row 1 variant: two vertically stacked photos beside the copy, instead
+   of the usual single image. Desktop keeps the copy in one column and
+   stacks both photos in the other; on mobile the two photos no longer
+   land together as one block — the second paragraph is threaded
+   between them (intro, photo 1, paragraph 2, photo 2). */
+.welcome-row-split {
+  align-items: start;
+  column-gap: 5rem;
+  row-gap: 1.75rem;
+}
+.welcome-row-split .welcome-intro { grid-column: 1; grid-row: 1; }
+.welcome-row-split .welcome-para-2 { grid-column: 1; grid-row: 2; }
+.welcome-row-split .welcome-photo-1 { grid-column: 2; grid-row: 1; }
+.welcome-row-split .welcome-photo-2 { grid-column: 2; grid-row: 2; }
+
 @media (max-width: 900px) {
   .welcome-row { grid-template-columns: 1fr; gap: 1.75rem; }
   .welcome-row + .welcome-row { margin-top: 3.25rem; }
   .welcome-photo { order: -1; }
   .welcome-copy p { max-width: none; }
+
+  .welcome-row-split .welcome-intro { grid-column: 1; grid-row: auto; order: 1; }
+  .welcome-row-split .welcome-photo-1 { grid-column: 1; grid-row: auto; order: 2; }
+  .welcome-row-split .welcome-para-2 { grid-column: 1; grid-row: auto; order: 3; }
+  .welcome-row-split .welcome-photo-2 { grid-column: 1; grid-row: auto; order: 4; }
 }
 
 /* ── HISTORY / STATS ────────────────────────────────────────── */
