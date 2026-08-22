@@ -837,28 +837,25 @@ section { padding: 6.5rem 0; }
    the two sections' padding stacks into a gap with nothing visually
    explaining it. */
 .testimonials { padding-top: 2.5rem; }
-.testimonials .container {
+/* No photos, no carousel — all three testimonials shown together as
+   plain cards in a row. */
+.testimonials-grid {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 4.5rem;
-  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
 }
-.testimonial-photo {
-  aspect-ratio: 1/1;
+.testimonial-card {
+  background: var(--sand-100);
   border-radius: var(--radius-md);
-  overflow: hidden;
-  background: var(--sand-300);
+  padding: 2.5rem 2.25rem;
 }
-.testimonial-photo img { width: 100%; height: 100%; object-fit: cover; }
-.testimonial-name { font-family: var(--sans); font-weight: 800; font-size: 1.1rem; color: var(--ink); margin-top: 2rem; }
+.testimonial-name { font-family: var(--sans); font-weight: 800; font-size: 1.1rem; color: var(--ink); margin-top: 1.75rem; }
 .testimonial-role { font-family: var(--sans); font-weight: 700; font-size: 0.82rem; color: var(--green-500); margin-top: 0.35rem; }
-.testimonial-quote-mark { font-family: var(--display); font-size: 4rem; color: var(--green-500); line-height: 1; margin-top: 1.5rem; }
-.testimonial-quote { font-size: 1.2rem; color: var(--ink-soft); line-height: 1.6; margin-top: 0.5rem; max-width: 520px; }
-.testimonials .arrow-controls { margin-top: 2.5rem; }
+.testimonial-quote-mark { font-family: var(--display); font-size: 4rem; color: var(--green-500); line-height: 1; }
+.testimonial-quote { font-size: 1.1rem; color: var(--ink-soft); line-height: 1.6; margin-top: 0.5rem; }
 
 @media (max-width: 900px) {
-  .testimonials .container { grid-template-columns: 1fr; gap: 2.5rem; }
-  .testimonial-photo { max-width: 320px; }
+  .testimonials-grid { grid-template-columns: 1fr; gap: 1.75rem; }
 }
 @media (max-width: 700px) {
   .testimonials { padding-top: 1.5rem; }
