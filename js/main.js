@@ -14,6 +14,12 @@ if (navToggle && navLinks) {
     const isOpen = navLinks.classList.toggle('mobile-open');
     navToggle.setAttribute('aria-expanded', isOpen);
   });
+  navLinks.querySelectorAll('.nav-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('mobile-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
 }
 
 // ── Desktop dropdowns (Clinics / Shop) ──
