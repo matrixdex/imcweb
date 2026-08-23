@@ -13,7 +13,6 @@ if (navToggle && navLinks) {
   navToggle.addEventListener('click', () => {
     const isOpen = navLinks.classList.toggle('mobile-open');
     navToggle.setAttribute('aria-expanded', isOpen);
-    nav.classList.toggle('menu-open', isOpen);
   });
 }
 

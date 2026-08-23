@@ -307,6 +307,15 @@ section { padding: 6.5rem 0; }
   background: var(--green-800);
   box-shadow: var(--shadow-md);
 }
+/* interior pages whose hero sits directly behind the unscrolled nav */
+#nav.nav--on-dark:not(.scrolled) .brand-subtitle,
+#nav.nav--on-dark:not(.scrolled) .nav-link,
+#nav.nav--on-dark:not(.scrolled) .nav-cart {
+  color: var(--cream);
+}
+#nav.nav--on-dark:not(.scrolled) .nav-toggle span {
+  background: var(--cream);
+}
 .nav-inner {
   display: flex;
   align-items: center;
@@ -389,7 +398,6 @@ section { padding: 6.5rem 0; }
   align-items: center;
   gap: 1.75rem;
 }
-.nav-cta { flex-shrink: 0; }
 .nav-cart {
   color: var(--ink);
   position: relative;
@@ -427,7 +435,7 @@ section { padding: 6.5rem 0; }
    to lay out on one line without wrapping or clipping — 980px left a
    cramped, overflowing middle ground on tablet-width screens. */
 @media (max-width: 1180px) {
-  .nav-links, .nav-cart, .nav-cta { display: none; }
+  .nav-links, .nav-cart { display: none; }
   .nav-toggle { display: flex; }
   .nav-links.mobile-open {
     display: flex;
@@ -455,19 +463,22 @@ section { padding: 6.5rem 0; }
   .nav-links.mobile-open li.open .nav-dropdown { display: block; }
   .nav-links.mobile-open .nav-dropdown a { color: var(--cream); }
   .nav-links.mobile-open .nav-link { color: var(--cream); }
-  .nav-links.mobile-open .nav-cta { display: inline-flex; margin-top: 0.5rem; }
+}
 
-  /* The CTA button lives in .nav-right, a sibling of #navLinks, not inside
-     it — so it can't be revealed with a ".nav-links.mobile-open .nav-cta"
-     descendant selector. main.js mirrors the open state onto #nav itself
-     (nav.menu-open) so it can be shown here alongside the open menu. */
-  #nav.menu-open .nav-cta {
-    display: inline-flex;
-    position: fixed;
-    left: 2.5rem;
-    right: 2.5rem;
-    bottom: 2rem;
-    z-index: 1001;
+/* Below ~430px the logo + tagline no longer leave room for the hamburger
+   on the same row (it was getting pushed off-screen) — shrink the mark,
+   let the tagline wrap within a fixed width instead of running on one
+   line, and tighten the nav's side padding/gap to win back the space. */
+@media (max-width: 430px) {
+  .nav-inner { padding: 1rem 1.1rem; gap: 0.85rem; }
+  #nav.scrolled .nav-inner { padding: 0.75rem 1.1rem; }
+  .brand-mark-img { width: 60px; height: 60px; }
+  .brand-subtitle {
+    font-size: 0.6rem;
+    letter-spacing: 0.05em;
+    white-space: normal;
+    max-width: 150px;
+    line-height: 1.3;
   }
 }
 
@@ -863,7 +874,7 @@ section { padding: 6.5rem 0; }
 }
 .conditions-intro p {
   color: var(--ink-muted);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1.8;
   margin: 1.25rem 0 2rem;
 }
@@ -1173,7 +1184,7 @@ footer.site-footer { background: var(--green-800); padding: 5rem 0 2.5rem; }
 /* ── INNER PAGE HERO (reusable for non-home pages) ─────────── */
 .page-hero {
   background: var(--green-800);
-  padding: 10.5rem 0 5rem;
+  padding: 14rem 0 5rem;
   text-align: center;
 }
 .page-hero .eyebrow { display: block; }
@@ -1188,6 +1199,13 @@ footer.site-footer { background: var(--green-800); padding: 5rem 0 2.5rem; }
 }
 .page-hero .breadcrumb a { color: var(--cream); }
 
+@media (max-width: 800px) {
+  .page-hero {
+    
+    padding: 12rem 0 4rem;
+    
+  }
+}
 /* ── SCROLL REVEAL ──────────────────────────────────────────── */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -1239,6 +1257,41 @@ footer.site-footer { background: var(--green-800); padding: 5rem 0 2.5rem; }
 .product-media .placeholder-label { color: rgba(43,51,39,0.5); }
 .doctor-tab-avatar .img-placeholder svg { width: 42%; height: 42%; }
 .doctor-tab-avatar .img-placeholder::after { border: none; }
+
+/* ── LEGAL PAGES (privacy / terms / disclaimer) ──────────────── */
+.legal-content { padding: 6.5rem 0; }
+.legal-content .container { max-width: 760px; }
+.legal-updated {
+  font-family: var(--display);
+  font-size: 1rem;
+  color: var(--ink-faint);
+  margin-bottom: 2.5rem;
+  display: block;
+}
+.legal-highlight {
+  background: var(--sand-100);
+  border: 1px solid var(--sand-300);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.75rem;
+  margin: 0 0 2.5rem;
+}
+.legal-highlight p { margin: 0; color: var(--ink); }
+.legal-content h2 {
+  font-size: 1.5rem;
+  margin: 2.75rem 0 1rem;
+  color: var(--green-700);
+}
+.legal-content h2:first-of-type { margin-top: 0; }
+.legal-content p { color: var(--ink-muted); line-height: 1.85; margin-bottom: 1.1rem; }
+.legal-content ul { margin: 0 0 1.1rem 1.25rem; }
+.legal-content li { color: var(--ink-muted); line-height: 1.85; margin-bottom: 0.4rem; list-style: disc; }
+.legal-content strong { color: var(--ink-soft); }
+.legal-content a { color: var(--green-600); text-decoration: underline; text-underline-offset: 2px; }
+.legal-content a:hover { color: var(--green-500); }
+
+@media (max-width: 700px) {
+  .legal-content { padding: 4.5rem 0; }
+}
 
 /* ── UTILITIES ──────────────────────────────────────────────── */
 .text-center { text-align: center; }
