@@ -767,13 +767,13 @@ section { padding: 6.5rem 0; }
 }
 .doctor-quote {
   font-family: var(--display);
-  font-size: clamp(2rem, 2vw, 2rem);
+  font-size: clamp(1.4rem, 2vw, 1.4rem);
   color: var(--ink);
   line-height: 1.5;
   margin-bottom: 2rem;
 }
 .on-dark .doctor-quote { color: var(--sand-200); }
-.doctor-bio { color: var(--ink-soft); margin-bottom: 2.25rem; font-size: 2rem;}
+.doctor-bio { color: var(--ink-soft); margin-bottom: 2.25rem; font-size: 1.4rem;}
 .on-dark .doctor-bio { color: var(--sand-300); }
 .doctor-photo {
   
