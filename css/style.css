@@ -1103,6 +1103,8 @@ section { padding: 6.5rem 0; }
   line-height: 1.6;
   color: var(--ink);
 }
+.visit-detail-text span { display: block; }
+.visit-detail-text span + span { margin-top: 0.6rem; }
 .on-dark .visit-detail-text span,
 .on-dark .visit-detail-text a { color: var(--cream); }
 .visit-detail-text a { transition: color var(--transition); }
@@ -1110,8 +1112,18 @@ section { padding: 6.5rem 0; }
 
 /* Photo column: the image sets the column height, and the maps button sits
    flush beneath it at the same width, so the two columns finish level
-   instead of leaving a hollow gap above the footer. */
-.visit-map { display: flex; flex-direction: column; gap: 1.75rem; }
+   instead of leaving a hollow gap above the footer. Two clinics means two
+   of these side by side on desktop; .visit-clinic-col carries the same
+   flex/gap layout each one previously had alone. */
+.visit-clinics { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem; }
+.visit-clinic-col { display: flex; flex-direction: column; gap: 1.25rem; }
+.visit-clinic-col .eyebrow { display: block; margin-bottom: 0; font-size: 1.014rem; text-align: center; }
+
+/* Center the (usually shorter) clinics column against the details column
+   beside it, rather than pinning both to the top. */
+@media (min-width: 901px) {
+  .visit-grid { align-items: center; }
+}
 .visit-photo {
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -1130,6 +1142,7 @@ section { padding: 6.5rem 0; }
   .visit-grid { grid-template-columns: 1fr; gap: 2.75rem; }
   .visit-info > p { max-width: none; }
   .visit-details { margin: 2.25rem 0; }
+  .visit-clinics { grid-template-columns: 1fr; gap: 2.75rem; }
 }
 
 /* ── FOOTER ─────────────────────────────────────────────────── */
