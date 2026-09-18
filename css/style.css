@@ -95,6 +95,7 @@ body {
   color: var(--ink-soft);
   background: var(--sand-200);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
@@ -437,6 +438,7 @@ section { padding: 6.5rem 0; }
 @media (max-width: 1180px) {
   .nav-links, .nav-cart { display: none; }
   .nav-toggle { display: flex; }
+  .brand-subtitle { white-space: normal; max-width: 160px; }
   .nav-links.mobile-open {
     display: flex;
     flex-direction: column;
