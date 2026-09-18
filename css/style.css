@@ -546,10 +546,10 @@ section { padding: 6.5rem 0; }
 .quick-info { background: var(--green-900); padding: 0; }
 .quick-info-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 .quick-info-card {
-  padding: 2.5rem 2rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 2.5vw, 2rem);
   text-align: center;
   border-right: 1px solid rgba(242,236,218,0.14);
   transition: background var(--transition);
@@ -557,16 +557,16 @@ section { padding: 6.5rem 0; }
 .quick-info-card:last-child { border-right: none; }
 .quick-info-title {
   font-family: var(--sans);
-  font-size: 0.75rem;
+  font-size: clamp(0.6rem, 0.9vw, 0.75rem);
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--sand-300);
-  margin-bottom: 0.75rem;
+  margin-bottom: clamp(0.5rem, 0.9vw, 0.75rem);
 }
 .quick-info-detail {
   font-family: var(--sans);
-  font-size: 1.25rem;
+  font-size: clamp(0.95rem, 1.5vw, 1.25rem);
   font-weight: 500;
   color: var(--cream);
 }
@@ -576,27 +576,55 @@ section { padding: 6.5rem 0; }
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  gap: 1.5rem;
+  gap: clamp(0.75rem, 1.875vw, 1.5rem);
 }
 .quick-info-hours-col {
   flex: 1;
-  padding-left: 1.5rem;
-  border-left: 1px solid rgba(242,236,218,0.14);
 }
 .quick-info-hours-col:first-child {
   padding-left: 0;
-  border-left: none;
 }
-.quick-info-subdetail { font-size: 0.9rem; color: var(--sand-300); margin-top: 0.35rem; }
-.quick-info-link { cursor: pointer; }
-.quick-info-link:hover { background: var(--green-700); }
-.quick-info-link:hover .quick-info-title,
-.quick-info-link:hover .quick-info-detail { color: var(--white); }
+.quick-info-subdetail { font-size: clamp(0.75rem, 1.1vw, 0.9rem); color: var(--sand-300); margin-top: clamp(0.2rem, 0.43vw, 0.35rem); }
+.quick-info-booking { display: flex; flex-direction: column; }
+.quick-info-contact-row {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  margin-top: clamp(0.5rem, 0.9vw, 0.75rem);
+}
+.quick-info-contact-item {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 0;
+  color: var(--cream);
+  transition: background var(--transition);
+}
+.quick-info-contact-item:hover { background: rgba(255,255,255,0.06); }
+.quick-info-contact-item:hover .quick-info-detail { color: var(--white); }
+.quick-info-contact-label {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sand-300);
+  margin-bottom: 0.4rem;
+}
+.quick-info-detail--email {
+  font-size: clamp(0.88rem, 1.4vw, 1.14rem);
+  word-break: break-all;
+}
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
   .quick-info-grid { grid-template-columns: 1fr; }
   .quick-info-card { border-right: none; border-bottom: 1px solid rgba(242,236,218,0.14); }
   .quick-info-card:last-child { border-bottom: none; }
+  .quick-info-contact-row { flex-direction: column; align-items: center; gap: 0.75rem; }
+  .quick-info-contact-item { padding: 0; }
 }
 
 /* ── HEALTHIER STRIP ──────────────────────────────────────── */
