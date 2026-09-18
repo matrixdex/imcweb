@@ -144,6 +144,11 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); }
   color: var(--green-500);
   margin-bottom: 1rem;
 }
+.eyebrow--label {
+  text-transform: capitalize;
+  letter-spacing: 0.04em;
+  color: var(--green-700);
+}
 
 /* ── Layout ─────────────────────────────────────────────────── */
 .container {
@@ -165,7 +170,7 @@ section { padding: 6.5rem 0; }
   margin-bottom: 3.5rem;
   flex-wrap: wrap;
 }
-.section-header .heading-block h2 { margin-top: 0.25rem; }
+.section-header .heading-block h2 { margin-top: 0.25rem; color: var(--green-700); }
 .section-header .header-action { flex-shrink: 0; }
 
 /* ── Buttons ────────────────────────────────────────────────── */
@@ -615,7 +620,6 @@ section { padding: 6.5rem 0; }
   margin-bottom: 0.4rem;
 }
 .quick-info-detail--email {
-  font-size: clamp(0.88rem, 1.4vw, 1.14rem);
   word-break: break-all;
 }
 
@@ -640,8 +644,9 @@ section { padding: 6.5rem 0; }
   font-family: var(--sans);
   font-size: clamp(2rem, 2.6vw, 3.2rem);
   color: var(--ink);
-  font-weight: 300;
+  font-weight:400;
   line-height: 1.4;
+  font-style: italic;
 }
 .healthier-strip-copy em { font-style: italic; color: var(--green-600); font-weight: 700;}
 .healthier-strip-btn {
@@ -682,7 +687,7 @@ section { padding: 6.5rem 0; }
   align-items: center;
 }
 .welcome-row + .welcome-row { margin-top: 6rem; }
-.welcome-copy h2, .welcome-copy h3 { margin-bottom: 1.5rem; text-wrap: balance; }
+.welcome-copy h2, .welcome-copy h3 { margin-bottom: 1.5rem; text-wrap: balance; color: var(--green-700); }
 .welcome-copy p { color: var(--ink-soft); font-size: 0.98rem; line-height: 1.53; max-width: 480px; }
 .welcome-copy p + p { margin-top: 1.5rem; }
 .welcome-photo {
@@ -792,7 +797,7 @@ section { padding: 6.5rem 0; }
 }
 
 /* ── DOCTORS (single practitioner profile) ─────────────────── */
-.doctors { background: var(--sand-100); padding-top: 3.25rem; }
+.doctors { background: var(--sand-100); padding-top: 3.25rem; padding-bottom: 3.25rem; }
 .doctors .section-header { margin-bottom: 5.04rem; }
 .doctor-panels { position: relative; }
 .doctor-panel {
@@ -819,12 +824,10 @@ section { padding: 6.5rem 0; }
 .doctor-bio { color: var(--ink-soft); margin-bottom: 2.25rem; font-size: 0.98rem; line-height: 1.53; }
 .on-dark .doctor-bio { color: var(--sand-300); }
 .doctor-photo {
-  
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  background: var(--green-600);
 }
-.doctor-photo img { width: 100%; height: 100%; object-fit: cover; }
+.doctor-photo img { width: 100%; height: 100%; object-fit: contain; }
 
 @media (max-width: 900px) {
   .doctor-panel { grid-template-columns: 1fr; gap: 2rem; }
@@ -864,8 +867,8 @@ section { padding: 6.5rem 0; }
   -webkit-text-stroke: 1.2px var(--green-500);
   color: transparent
 }
-.clinic-card h3 { color: var(--ink); margin-bottom: 1rem; font-size: 2rem;}
-.clinic-card.active h3 { color: var(--ink); margin-bottom: 1rem; font-size: 2rem; }
+.clinic-card h3 { color: var(--green-700); margin-bottom: 1rem; font-size: 2rem;}
+.clinic-card.active h3 { color: var(--green-700); margin-bottom: 1rem; font-size: 2rem; }
 .clinic-card p { color: var(--ink-muted); font-size: 0.98rem; line-height: 1.53; }
 .clinic-card.active p { color: var(--ink-muted); font-size: 0.98rem; line-height: 1.53; }
 .clinic-card p + p { margin-top: 1.1rem; }
@@ -890,11 +893,14 @@ section { padding: 6.5rem 0; }
      once here, force all of them back to the plain, non-active look. */
   .clinic-card.active { background: var(--sand-100); border-color: var(--sand-300); }
   .clinic-card.active .clinic-num { -webkit-text-stroke: 1.2px var(--green-500); color: transparent; }
-  .clinic-card.active h3 { color: var(--ink); }
+  .clinic-card.active h3 { color: var(--green-700); }
   .clinic-card.active p { color: var(--ink-muted); }
 }
 
 /* ── CONDITIONS ─────────────────────────────────────────────── */
+.clinics { padding-top: 3.25rem; padding-bottom: 3.25rem; }
+.conditions { background: var(--sand-100); padding-top: 3.25rem; padding-bottom: 3.25rem; }
+
 /* Intro column + a two-up grid of plain condition rows, sitting between
    Clinics and Testimonials on the site's light parchment background so
    it reads as its own beat rather than an extension of either neighbor. */
@@ -904,6 +910,7 @@ section { padding: 6.5rem 0; }
   gap: 4rem;
   align-items: start;
 }
+.conditions-intro h2 { color: var(--green-700); }
 .conditions-intro p {
   color: var(--ink-muted);
   font-size: 0.98rem;
@@ -948,6 +955,8 @@ section { padding: 6.5rem 0; }
 }
 
 /* ── TESTIMONIALS ───────────────────────────────────────────── */
+.testimonials { padding-top: 3.25rem; }
+
 /* No photos, no carousel — all three testimonials shown together as
    plain cards in a row. */
 .testimonials-grid {
@@ -1088,26 +1097,23 @@ section { padding: 6.5rem 0; }
 }
 
 /* ── CTA / GET IN TOUCH ─────────────────────────────────────── */
-.visit { padding: 7rem 0; }
+.visit { padding: 7rem 0; background: var(--sand-100); }
 .visit-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
   align-items: start;
 }
-.visit-info h2 { margin-bottom: 1.25rem; }
+.visit-info h2 { margin-bottom: 1.25rem; color: var(--green-700); }
 .visit-info > p { color: var(--ink-muted); font-size: 0.98rem; line-height: 1.53; max-width: 460px; }
 .on-dark .visit-info > p { color: var(--sand-300); }
 
 .visit-details {
   display: flex;
   flex-direction: column;
-  gap: 1.15rem;
+  gap: 0;
   margin: 2rem 0 2.25rem;
-  padding-top: 1.85rem;
-  border-top: 1px solid var(--sand-300);
 }
-.on-dark .visit-details { border-top-color: rgba(242,236,218,0.16); }
 .visit-detail { display: flex; align-items: center; gap: 0.9rem; }
 .visit-detail-icon {
   width: 34px;
@@ -1123,14 +1129,7 @@ section { padding: 6.5rem 0; }
 .on-dark .visit-detail-icon { background: rgba(242,236,218,0.1); }
 .visit-detail-icon svg { width: 15px; height: 15px; }
 .visit-detail-text strong {
-  display: block;
-  font-family: var(--sans);
-  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--green-500);
-  margin-bottom: 0.2rem;
 }
 .visit-detail-text span,
 .visit-detail-text a {
@@ -1140,6 +1139,17 @@ section { padding: 6.5rem 0; }
 }
 .visit-detail-text span { display: block; }
 .visit-detail-text span + span { margin-top: 0.6rem; }
+.visit-detail { width: 100%; }
+.visit-detail-text { flex: 1; min-width: 0; }
+.visit-clinic-pairs { display: flex; gap: 2rem; width: 100%; }
+.visit-clinic-pair { display: flex; flex-direction: column; gap: 0.75rem; }
+.visit-address-block { display: flex; flex-direction: column; gap: 0.5rem; }
+.visit-addr-logo { height: 44px; width: auto; object-fit: contain; }
+.visit-phone-row { display: flex; align-items: center; gap: 0.9rem; }
+.visit-phone-row--mobile-only { display: none; }
+.visit-detail--desktop-only { display: flex; }
+.visit-detail:first-child { align-items: flex-start; }
+.visit-detail:first-child > .visit-detail-icon { margin-top: calc(44px + 0.5rem); }
 .on-dark .visit-detail-text span,
 .on-dark .visit-detail-text a { color: var(--cream); }
 .visit-detail-text a { transition: color var(--transition); }
@@ -1152,12 +1162,18 @@ section { padding: 6.5rem 0; }
    flex/gap layout each one previously had alone. */
 .visit-clinics { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem; }
 .visit-clinic-col { display: flex; flex-direction: column; gap: 1.25rem; }
-.visit-clinic-col .eyebrow { display: block; margin-bottom: 0; font-size: 1.014rem; text-align: center; }
+.visit-clinic-col .eyebrow { display: block; margin-bottom: 0; font-size: 1.318rem; text-align: center; }
 
 /* Center the (usually shorter) clinics column against the details column
    beside it, rather than pinning both to the top. */
 @media (min-width: 901px) {
   .visit-grid { align-items: center; }
+  .visit-clinic-pair { flex: 1; }
+  .visit-detail--desktop-only .visit-clinic-pairs > a { flex: 1; }
+  .visit-details .visit-detail-icon { display: none; }
+  .visit-detail { gap: 0; }
+  .visit-address-block { width: fit-content; align-items: flex-start; }
+  .visit-address-block .visit-addr-logo { margin-left: auto; margin-right: auto; }
 }
 .visit-photo {
   border-radius: var(--radius-md);
@@ -1174,10 +1190,21 @@ section { padding: 6.5rem 0; }
 .visit-map-btn { width: 100%; }
 
 @media (max-width: 900px) {
-  .visit-grid { grid-template-columns: 1fr; gap: 2.75rem; }
+  .visit-grid { grid-template-columns: 1fr; gap: 2.25rem; }
   .visit-info > p { max-width: none; }
-  .visit-details { margin: 2.25rem 0; }
+  .visit-details { margin: 2.25rem 0 0; }
   .visit-clinics { grid-template-columns: 1fr; gap: 2.75rem; }
+  .visit-clinic-pairs { flex-direction: column; gap: 1.15rem; }
+  .visit-clinic-pair { gap: 0; }
+  .visit-details .visit-detail:last-child { margin-top: 1.15rem; }
+  .visit-details .visit-detail-icon { display: none; }
+  .visit-detail { gap: 0; }
+  .visit-address-block { flex-direction: row; align-items: center; gap: 0.9rem; }
+  .visit-addr-logo { width: 34px; height: auto; flex-shrink: 0; object-fit: contain; }
+  .visit-clinic-pair:last-child .visit-addr-logo { max-height: 24px; }
+  .visit-phone-row--mobile-only { display: flex; padding-left: calc(34px + 0.9rem); }
+  .visit-details .visit-detail:not(:first-child) .visit-detail-text { padding-left: calc(34px + 0.9rem); }
+  .visit-detail--desktop-only { display: none; }
 }
 
 /* ── FOOTER ─────────────────────────────────────────────────── */
