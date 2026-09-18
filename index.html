@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Integrated Medical Centre — Osteopathy, Acupuncture &amp; Hypoxic Training</title>
-<meta name="description" content="Integrated Medical Centre is an alternative centre and store, providing natural therapies such as osteopathy, acupuncture, hypoxic training, herbal vitamins and supplements." />
+<title>Integrated Medical Centre — Osteopathy &amp; Naturopathy in London's premier Harley Street</title>
+<meta name="description" content="Integrated Medical Centre is an alternative medical centre with natural therapies such as osteopathy and naturopathy for adults and children, particularly in neuromuscular diseases like stroke and developmental disorders." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500;600;700&display=swap">
@@ -364,47 +364,44 @@ src="./assets/dr-imran-ali.png?v=2"
     </div>
 
 <div class="products-grid" id="product-list">
-      <div class="product-card reveal">
+      <div class="product-card reveal" data-product="joint-support-oil">
         <div class="product-media">
-          
           <img src="./assets/joint-support-oil.png" alt="Dr Ali's Joint Support Oil" class="product-image" />
         </div>
         <div class="product-body">
           <h3>Joint Support Oil</h3>
-<p class="product-desc">Blend of natural oils for inflammation of muscles, ligaments &amp; joints</p>
-<div class="product-price"><span class="now">£25</span></div>
+          <p class="product-desc">Blend of natural oils for inflammation of muscles, ligaments &amp; joints</p>
+          <div class="product-price"><span class="now">£25</span></div>
           <div class="product-footer">
-            <!-- <a href="pages/shop.html#oils" class="btn-text">Learn More</a> -->
+            <button class="btn btn-outline-dark product-view-btn" data-product="joint-support-oil">View Details</button>
           </div>
         </div>
       </div>
 
-      <div class="product-card reveal">
+      <div class="product-card reveal" data-product="detox-powder">
         <div class="product-media">
-          
           <img src="./assets/detox-powder.png" alt="Detox Powder" class="product-image" />
         </div>
         <div class="product-body">
           <h3>Detox Powder</h3>
-<p class="product-desc">A blend of time tested traditional ingredients to maintain a healthy gut</p>
-<div class="product-price"><span class="now">£45</span></div>
+          <p class="product-desc">A blend of time tested traditional ingredients to maintain a healthy gut</p>
+          <div class="product-price"><span class="now">£45</span></div>
           <div class="product-footer">
-            <!-- <a href="pages/shop.html#supplements" class="btn-text">Learn More</a> -->
+            <button class="btn btn-outline-dark product-view-btn" data-product="detox-powder">View Details</button>
           </div>
         </div>
       </div>
 
-      <div class="product-card reveal">
+      <div class="product-card reveal" data-product="breakfast-mewa">
         <div class="product-media">
-          
           <img src="./assets/breakfast-mewa.png" alt="Breakfast Mewa" class="product-image" />
         </div>
         <div class="product-body">
           <h3>Breakfast Mewa</h3>
-<p class="product-desc">Handcrafted Superfood of Ancient India</p>
-<div class="product-price"><span class="now">£55</span></div>
+          <p class="product-desc">Handcrafted Superfood of Ancient India</p>
+          <div class="product-price"><span class="now">£55</span></div>
           <div class="product-footer">
-            <!-- <a href="pages/shop.html#vitamins" class="btn-text">Learn More</a> -->
+            <button class="btn btn-outline-dark product-view-btn" data-product="breakfast-mewa">View Details</button>
           </div>
         </div>
       </div>
@@ -544,6 +541,40 @@ src="./assets/dr-imran-ali.png?v=2"
     </div>
   </div>
 </footer>
+
+<!-- ══════════════════════ PRODUCT DETAIL OVERLAY ══════════════════════ -->
+<div class="product-overlay" id="productOverlay" aria-hidden="true">
+  <div class="product-overlay-backdrop" data-close></div>
+  <div class="product-overlay-panel" role="dialog" aria-modal="true" aria-labelledby="productOverlayTitle">
+    <button class="product-overlay-close" data-close aria-label="Close product details">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="2" y1="2" x2="16" y2="16"/><line x1="16" y1="2" x2="2" y2="16"/></svg>
+    </button>
+    <div class="product-overlay-body">
+      <div class="product-overlay-media">
+        <div class="product-overlay-icon" id="productOverlayIcon" aria-hidden="true"></div>
+      </div>
+      <div class="product-overlay-content">
+        <span class="eyebrow" id="productOverlayCategory"></span>
+        <h3 id="productOverlayTitle"></h3>
+        <div class="product-overlay-price" id="productOverlayPrice"></div>
+        <p id="productOverlayDesc"></p>
+        <div class="product-overlay-meta">
+          <div>
+            <strong>Key Ingredients</strong>
+            <p id="productOverlayIngredients"></p>
+          </div>
+          <div>
+            <strong>Best For</strong>
+            <p id="productOverlayBenefits"></p>
+          </div>
+        </div>
+        <div class="product-overlay-actions">
+          <a href="#" id="productEnquireLink" class="btn btn-fill" data-close>Enquire to Order</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="js/main.js?v=12"></script>
 </body>

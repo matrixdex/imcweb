@@ -148,3 +148,89 @@ if (clinicsWrap && clinicsTrack && clinicPrev && clinicNext) {
   window.addEventListener('resize', syncToViewport);
   syncToViewport();
 }
+
+// ── Product data & detail overlay ──
+const IMC_PRODUCTS = {
+  'joint-support-oil': {
+    category: 'Massage Oil',
+    name: 'Joint Support Oil',
+    price: '£25',
+    desc: 'A blend of natural oils formulated for use on inflammation of the muscles, ligaments and joints. Not tested on animals.',
+    ingredients: 'Sesamum indicum (sesame seed oil), Brassica alba (mustard seed oil), Nigella sativa (black seed oil), Syzygium aromaticum (clove oil), Mahanarayan oil.',
+    benefits: 'Muscle, ligament and joint inflammation, easing stiffness and discomfort.',
+    imageFile: 'joint-support-oil.png'
+  },
+  'detox-powder': {
+    category: 'Health Food',
+    name: 'Detox Powder',
+    price: '£45',
+    desc: 'A blend of time-tested traditional ingredients, made into a detox tea for detoxification and gut health. Soak half a teaspoon in a cup of hot water and leave overnight. Strain the tea and drink on an empty stomach in the morning.',
+    ingredients: 'Kadu (Swertia chirayata), Kariatu (Enicostemma littorale), Neem (Azadirachta indica), Amla (Emblica officinalis).',
+    benefits: 'Detoxification, gut health, a gentle morning cleansing ritual.',
+    imageFile: 'detox-powder.png'
+  },
+  'breakfast-mewa': {
+    category: 'Breakfast Muesli',
+    name: 'Breakfast Mewa',
+    price: '£55',
+    desc: 'A handcrafted superfood of ancient India. Add one cup of mewa to one cup of milk, mix thoroughly, then heat for 7 minutes over a gas hob. Contains gluten and nuts.',
+    ingredients: 'Oats, almonds, sliced pistachios, green raisins, barberries, dried orange peels, saffron.',
+    benefits: 'Sustained morning energy, easy digestion, a nourishing start to the day.',
+    imageFile: 'breakfast-mewa.png'
+  }
+};
+
+const productOverlay = document.getElementById('productOverlay');
+if (productOverlay) {
+  const overlayIcon        = document.getElementById('productOverlayIcon');
+  const overlayCategory    = document.getElementById('productOverlayCategory');
+  const overlayTitle       = document.getElementById('productOverlayTitle');
+  const overlayPrice       = document.getElementById('productOverlayPrice');
+  const overlayDesc        = document.getElementById('productOverlayDesc');
+  const overlayIngredients = document.getElementById('productOverlayIngredients');
+  const overlayBenefits    = document.getElementById('productOverlayBenefits');
+  const enquireLink        = document.getElementById('productEnquireLink');
+  let lastFocused = null;
+
+  function openProduct(id) {
+    const p = IMC_PRODUCTS[id];
+    if (!p) return;
+    overlayIcon.innerHTML = `<img src="./assets/${p.imageFile}" alt="${p.name}">`;
+    overlayCategory.textContent    = p.category;
+    overlayTitle.textContent       = p.name;
+    overlayPrice.textContent       = p.price;
+    overlayDesc.textContent        = p.desc;
+    overlayIngredients.textContent = p.ingredients;
+    overlayBenefits.textContent    = p.benefits;
+    const body = `Hi. I would like to order IMC's ${p.name}\n\nQuantity: 1\nPickup/Delivery: Pickup at 75 Harley Street, London W1G 8QL\nDelivery Address (for deliveries in UK and EU): \n\nThanks`;
+    enquireLink.href = `mailto:enquiries@theintegratedmed.com?subject=${encodeURIComponent(`Product Enquiry – ${p.name}`)}&body=${encodeURIComponent(body)}`;
+    lastFocused = document.activeElement;
+    productOverlay.classList.add('open');
+    productOverlay.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('overlay-open');
+    const closeBtn = productOverlay.querySelector('.product-overlay-close');
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeProduct() {
+    productOverlay.classList.remove('open');
+    productOverlay.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('overlay-open');
+    if (lastFocused) lastFocused.focus();
+  }
+
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-product]');
+    if (!trigger || trigger.closest('#productOverlay')) return;
+    e.preventDefault();
+    openProduct(trigger.getAttribute('data-product'));
+  });
+
+  productOverlay.querySelectorAll('[data-close]').forEach(el => {
+    el.addEventListener('click', closeProduct);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && productOverlay.classList.contains('open')) closeProduct();
+  });
+}
