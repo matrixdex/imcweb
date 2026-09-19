@@ -284,10 +284,10 @@ section { padding: 6.5rem 0; }
   letter-spacing: 0.12em;
   text-align: center;
   white-space: nowrap;
-  color: var(--ink);
+  color: #935B21;
   transition: color var(--transition);
 }
-#nav.scrolled .brand-subtitle { color: var(--ink); }
+#nav.scrolled .brand-subtitle { color: #935B21; }
 
 @media (max-width: 800px) {
   .brand-mark-img {
@@ -694,10 +694,11 @@ section { padding: 6.5rem 0; }
    image, text, image, text, image, text. */
 .welcome-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.1fr;
   gap: 5rem;
   align-items: center;
 }
+.welcome-row--photo-left { grid-template-columns: 1.1fr 1fr; }
 .welcome-row + .welcome-row { margin-top: 6rem; }
 .welcome-copy h2, .welcome-copy h3 { margin-bottom: 1.5rem; text-wrap: balance; color: var(--green-700); }
 .welcome-copy p { color: var(--ink-soft); font-size: 0.98rem; line-height: 1.53; max-width: 480px; }
@@ -720,6 +721,7 @@ section { padding: 6.5rem 0; }
   column-gap: 5rem;
   row-gap: 1.75rem;
 }
+.welcome-photo-1 { aspect-ratio: 3 / 2; }
 .welcome-row-split .welcome-intro { grid-column: 1; grid-row: 1; }
 .welcome-row-split .welcome-para-2 { grid-column: 1; grid-row: 2; }
 .welcome-row-split .welcome-photo-1 { grid-column: 2; grid-row: 1; }
@@ -1021,7 +1023,7 @@ section { padding: 6.5rem 0; }
   margin: 0 auto 2.5rem;
 }
 .products-hero-caption h2 { color: var(--green-700); margin-bottom: 0.75rem; }
-.products-hero-caption p { color: var(--ink-muted); font-size: 1.02rem; }
+.products-hero-caption p { color: var(--ink); font-size: 1.2rem; }
 
 .products-hero {
   border-radius: var(--radius-lg);
