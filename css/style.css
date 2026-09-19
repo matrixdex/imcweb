@@ -803,9 +803,15 @@ section { padding: 6.5rem 0; }
 .doctor-panel {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-rows: auto 1fr;
+  column-gap: 4rem;
+  row-gap: 0;
+  grid-template-areas: "name photo" "copy photo";
   align-items: start;
 }
+.doctor-name { grid-area: name; }
+.doctor-panel-copy { grid-area: copy; }
+.doctor-photo { grid-area: photo; }
 .doctor-quote-mark {
   font-family: var(--display);
   font-size: 5rem;
@@ -830,8 +836,13 @@ section { padding: 6.5rem 0; }
 .doctor-photo img { width: 100%; height: 100%; object-fit: contain; }
 
 @media (max-width: 900px) {
-  .doctor-panel { grid-template-columns: 1fr; gap: 2rem; }
-  .doctor-panel .doctor-photo { order: -1; max-width: 320px; }
+  .doctors { padding-top: 1.3rem; padding-bottom: 0; }
+  .clinics { padding-top: 1.3rem; padding-bottom: 1.5925rem; }
+  .conditions { padding-top: 1.5925rem; }
+  .doctor-panel { display: flex; flex-direction: column; gap: 2rem; }
+  .doctor-name { order: 1; }
+  .doctor-photo { order: 2; max-width: 320px; }
+  .doctor-panel-copy { order: 3; }
 }
 
 /* ── CLINICS CAROUSEL ("What We Offer") ───────────────────────
@@ -840,7 +851,7 @@ section { padding: 6.5rem 0; }
    at all — every card is shown in a plain vertical stack, matched by
    js/main.js only running the paging logic when window.innerWidth is
    above that same 1100px line. */
-.clinics-track-wrap { overflow: hidden; border: 1px solid var(--sand-300); }
+.clinics-track-wrap { overflow: hidden; border: 1px solid var(--sand-300); border-radius: var(--radius-lg); }
 .clinics-track {
   display: flex;
   transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
@@ -976,7 +987,8 @@ section { padding: 6.5rem 0; }
 .testimonial-quote { font-size: 0.98rem; color: var(--ink-soft); line-height: 1.53; margin-top: 0.5rem; }
 
 @media (max-width: 900px) {
-  .testimonials-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+  .testimonials-grid { grid-template-columns: 1fr; gap: 0.4375rem; }
+  .testimonial-card { padding: 1.25rem 2.25rem; }
 }
 
 /* ── PRODUCTS ───────────────────────────────────────────────── */
@@ -1031,6 +1043,7 @@ section { padding: 6.5rem 0; }
 }
 .product-card {
   background: var(--sand-100);
+  border: 1px solid var(--sand-300);
   border-radius: var(--radius-md);
   overflow: hidden;
   transition: var(--transition);
