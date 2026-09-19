@@ -103,7 +103,7 @@ if (clinicsWrap && clinicsTrack && clinicPrev && clinicNext) {
   let pageIndex = 0;
 
   function carouselActive() {
-    return window.innerWidth > 1100;
+    return false;
   }
   function pageCount() {
     return Math.max(1, Math.ceil(cards.length / PER_VIEW));

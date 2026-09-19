@@ -667,9 +667,21 @@ section { padding: 6.5rem 0; }
   transition: var(--transition);
 }
 .healthier-strip-btn:hover { background: var(--green-700); color: var(--white); }
+.healthier-strip-action { display: inline-flex; align-items: center; flex-shrink: 0; }
+.healthier-strip-icon { display: none; }
 
 @media (max-width: 700px) {
   .healthier-strip-inner { flex-direction: column; align-items: flex-start; }
+  .healthier-strip-action { display: flex; width: 100%; justify-content: space-between; align-items: center; }
+  .healthier-strip-icon {
+    display: block;
+    width: 4.68rem;
+    height: 4.68rem;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+  }
 }
 
 /* ── ABOUT / WELCOME TO IMC ──────────────────────────────────
@@ -851,21 +863,25 @@ section { padding: 6.5rem 0; }
    at all — every card is shown in a plain vertical stack, matched by
    js/main.js only running the paging logic when window.innerWidth is
    above that same 1100px line. */
+.clinics .arrow-controls { display: none; }
 .clinics-track-wrap { overflow: hidden; border: 1px solid var(--sand-300); border-radius: var(--radius-lg); }
 .clinics-track {
-  display: flex;
-  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  transform: none !important;
+  transition: none;
 }
 .clinic-card {
-  flex: 0 0 25%;
   background: var(--sand-100);
   padding: 2.75rem 2.25rem;
   min-height: 340px;
   display: flex;
   flex-direction: column;
   border-right: 1px solid var(--sand-300);
+  border-bottom: 1px solid var(--sand-300);
 }
-.clinic-card:last-child { border-right: none; }
+.clinic-card:nth-child(4n) { border-right: none; }
+.clinic-card:nth-child(n+5) { border-bottom: none; }
 .clinic-card.active { background: var(--sand-100);  }
 .clinic-num {
   font-family: var(--sans);
@@ -885,8 +901,7 @@ section { padding: 6.5rem 0; }
 .clinic-card p + p { margin-top: 1.1rem; }
 
 @media (max-width: 1100px) {
-  .clinics .arrow-controls { display: none; }
-  .clinics-track-wrap { overflow: visible; border: none; }
+  .clinics-track-wrap { overflow: visible; border: none; border-radius: 0; }
   .clinics-track {
     display: flex;
     flex-direction: column;
@@ -926,7 +941,7 @@ section { padding: 6.5rem 0; }
   color: var(--ink-soft);
   font-size: 0.98rem;
   line-height: 1.53;
-  margin: 1.25rem 0 2rem;
+  margin: 2.5rem 0 2.5rem;
 }
 .conditions-grid {
   display: grid;
@@ -958,6 +973,9 @@ section { padding: 6.5rem 0; }
   flex-shrink: 0;
 }
 
+@media (min-width: 901px) {
+  .conditions-layout { grid-template-columns: 1fr 1fr; }
+}
 @media (max-width: 900px) {
   .conditions-layout { grid-template-columns: 1fr; gap: 2.5rem; }
 }
