@@ -11,22 +11,30 @@
 <link rel="stylesheet" href="../css/style.css?v=26" />
 <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 <style>
-  .hero { padding-top: 13rem; padding-bottom: 1.8rem; }
+  .hero { padding-top: 13rem; padding-bottom: 3.25rem; }
   .hero-mcc-img { width: 91%; clip-path: inset(10% 0 10% 0 round var(--radius-lg)); }
+  .welcome-section { padding-top: 2.8rem; padding-bottom: 2.8rem; }
+  .welcome-photo-1 { max-width: 88%; margin-left: auto; }
+  .welcome-row--photo-left .welcome-photo { max-width: 80%; }
+  .visit-clinic-col { max-width: 70%; margin-left: auto; }
   @media (max-width: 900px) {
-    .hero { padding-top: 11rem; }
+    .hero { padding-top: 11rem; padding-bottom: 2.6rem; }
+    .welcome-section { padding-top: 2.24rem; padding-bottom: 2.24rem; }
+    .conditions { padding-top: 2.6rem; padding-bottom: 2.6rem; }
+    .visit { padding-top: 2.24rem; padding-bottom: 2.8rem; }
     .hero-mcc-img { width: 100%; }
     .hero-visual { max-width: 100%; margin: 0; }
     .hero .container { gap: 0.25rem; }
+    .visit-clinic-col { width: 100%; max-width: 100%; margin: 0 auto; text-align: center; }
+    .visit-clinic-col .visit-photo,
+    .visit-clinic-col .visit-map-btn { width: 100%; }
+    .welcome-photo-1 { max-width: 100%; margin-left: 0; }
+    .welcome-row--photo-left .welcome-photo { max-width: 100%; }
   }
-  .welcome-section { padding-top: 0.975rem; }
-  .welcome-photo-1 { max-width: 88%; margin-left: auto; }
-  .welcome-row--photo-left .welcome-photo { max-width: 80%; }
   @media (min-width: 901px) {
     .visit-grid { align-items: start; }
     .visit-info .visit-details { margin-top: 3rem; }
   }
-  .visit-clinic-col { max-width: 70%; margin-left: auto; }
 </style>
 </head>
 <body>
