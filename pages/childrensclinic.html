@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Children's Clinic — Integrated Medical Centre</title>
+<meta name="description" content="Mayfair Children's Clinic (MCC) is IMC's dedicated outpatient clinic for children, offering integrated and naturopathic care for young patients from infancy through to adolescence." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="../css/style.css?v=26" />
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<style>
+  .hero { padding-top: 13rem; padding-bottom: 1.8rem; }
+  .hero-mcc-img { width: 91%; clip-path: inset(10% 0 10% 0 round var(--radius-lg)); }
+  @media (max-width: 900px) {
+    .hero { padding-top: 11rem; }
+    .hero-mcc-img { width: 100%; }
+    .hero-visual { max-width: 100%; margin: 0; }
+    .hero .container { gap: 0.25rem; }
+  }
+  .welcome-section { padding-top: 0.975rem; }
+  .welcome-photo-1 { max-width: 88%; margin-left: auto; }
+  .welcome-row--photo-left .welcome-photo { max-width: 80%; }
+  @media (min-width: 901px) {
+    .visit-grid { align-items: start; }
+    .visit-info .visit-details { margin-top: 3rem; }
+  }
+  .visit-clinic-col { max-width: 70%; margin-left: auto; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════ NAVIGATION ══════════════════════ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="brand-block">
+      <a href="../index.html" class="brand-mark" aria-label="Integrated Medical Centre home">
+        <img src="../assets/imc-logo2.png" alt="Integrated Medical Centre" class="brand-mark-img" />
+      </a>
+     <span class="brand-subtitle"><em>the leading name in ethical medicine</em></span>
+    </div>
+
+<ul class="nav-links" id="navLinks">
+  <li><a href="../index.html#about" class="nav-link">About Us</a></li>
+  <li><a href="../index.html#clinics" class="nav-link">Services</a></li>
+  <li><a href="../index.html#conditions" class="nav-link">Conditions</a></li>
+  <li><a href="../index.html#products" class="nav-link">Shop</a></li>
+  <li><a href="childrensclinic.html" class="nav-link">Children's Clinic</a></li>
+  <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+  <li><a href="terms.html" class="nav-link">Terms & Conditions</a></li>
+</ul>
+
+    <div class="nav-right">
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════ HERO ══════════════════════ -->
+<section class="hero bg-alt-light" id="hero">
+  <div class="container">
+    <div class="hero-visual reveal">
+      <img src="../assets/mcc1.jpg" alt="Mayfair Children's Clinic" class="hero-mcc-img" style="border-radius:var(--radius-lg);display:block;" />
+    </div>
+
+    <div class="hero-copy reveal">
+<h1>Children's Clinic</h1>
+<p>Mayfair Children's Clinic is our dedicated outpatient clinic for children. Children from infants to young adults receive outstanding integrated care in a calm, friendly environment.</p>      <a href="#about" class="btn btn-fill">Book appointment</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ ABOUT / WELCOME TO MCC ══════════════════════ -->
+<section class="welcome-section" id="about">
+  <div class="container">
+
+    <!-- Row 1: text left, two stacked images right. -->
+    <div class="welcome-row welcome-row-split reveal">
+      <div class="welcome-copy welcome-intro">
+        <h2><span class="welcome-title-nowrap">Child care specialists</span></h2>
+        <p>
+          At Mayfair Children's Clinic, our highly experienced consultants are among the very best in London. We are trusted by parents from all over the UK and beyond. Our standard is personalised, high-quality care for children and young people aged 0-18. Founded on the conviction that children deserve care as unique as they are, we empower families to prioritise their children's health and well-being through exceptional paediatric care in an environment that fosters connection and quality. 
+        </p>
+      </div>
+      <div class="welcome-photo welcome-photo-1">
+        <img
+src="../assets/ccclinic.jpeg"
+          alt="Interior of Mayfair Children's Clinic"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <!-- Row 2: image left, text right -->
+    <div class="welcome-row welcome-row--photo-left reveal">
+      <div class="welcome-photo">
+        <img
+src="../assets/mcc2.JPG"
+          alt="Integrated paediatric care at Mayfair Children's Clinic"
+          loading="lazy"
+        />
+      </div>
+      <div class="welcome-copy">
+        <h2>Balanced approach</h2>
+        <p>
+          We follow an integrated philosophy: treat the whole child, not just their symptoms. We strive to understand the root cause of illness. Our blend of conventional medicine with gentle, natural therapies is balanced care for the young. Our care is personalised and delivered in a calm, child-friendly environment.</p>
+          <p>Early and holistic intervention is the foundation of lifelong health. Every treatment plan is carefully crafted to support growth and development.</p>
+      </div>
+    </div>
+
+    <!-- Row 3: text left, image right -->
+    <!-- <div class="welcome-row reveal">
+      <div class="welcome-copy">
+        <h2>Embracing Innovation</h2>
+        <p>
+          MCC keeps pace with the latest advances in paediatric diagnostics and treatment. Our clinic integrates modern diagnostic tools — including functional testing, nutritional analysis, and cutting-edge imaging available through our partner facilities — to build a complete picture of each child's health. This precision enables us to design targeted, effective interventions rather than relying on a one-size-fits-all approach.
+        </p>
+        <p>Our commitment to innovation is matched by our commitment to safety. Every technology and technique we use is chosen with the wellbeing of children as the foremost priority.</p>
+      </div>
+      <div class="welcome-photo">
+        <img
+src="../assets/inn.jpeg"
+          alt="Modern diagnostic technology at Mayfair Children's Clinic"
+          loading="lazy"
+        />
+      </div>
+    </div> -->
+
+  </div>
+</section>
+
+<!-- ══════════════════════ CONDITIONS ══════════════════════ -->
+<section class="conditions bg-light" id="conditions">
+  <div class="container">
+    <div class="conditions-layout">
+      <div class="conditions-intro reveal">
+        <h2>Conditions we treat</h2>
+        <p>Conditions specific to children we address at Mayfair Children's Clinic</p>
+       <a href="mailto:enquiries@theintegratedmed.com" class="btn btn-outline-dark">Enquire Now</a>
+      </div>
+      <div class="conditions-grid reveal">
+        
+        <div class="condition-item"><span class="condition-dot"></span>Neurodevelopmental disorders</div>
+        <div class="condition-item"><span class="condition-dot"></span>Adolescent wellness</div>
+        <div class="condition-item"><span class="condition-dot"></span>Asthma</div>
+        <div class="condition-item"><span class="condition-dot"></span>Chronic cough</div>
+        <div class="condition-item"><span class="condition-dot"></span>Wheezing</div>
+        <div class="condition-item"><span class="condition-dot"></span>Exercised-induced breathing issues</div>
+        
+        <div class="condition-item"><span class="condition-dot"></span>Tongue-tie</div>
+        <div class="condition-item"><span class="condition-dot"></span>Autism</div>
+        <div class="condition-item"><span class="condition-dot"></span>ADHD</div>
+        <div class="condition-item"><span class="condition-dot"></span>Obesity</div>
+        
+        
+        <div class="condition-item"><span class="condition-dot"></span>Polycystic Ovary Syndrome (PCOS)</div>
+        <div class="condition-item"><span class="condition-dot"></span>Type 1 diabetes</div>
+        <div class="condition-item"><span class="condition-dot"></span>Type 2 diabetes</div>
+        <div class="condition-item"><span class="condition-dot"></span>Feeding difficulties</div>
+        <div class="condition-item"><span class="condition-dot"></span>Growth issues</div>
+        <div class="condition-item"><span class="condition-dot"></span>Infection</div>
+        <div class="condition-item"><span class="condition-dot"></span>Eczema</div>
+        <div class="condition-item"><span class="condition-dot"></span>Rashes and skin allergies</div>
+        <div class="condition-item"><span class="condition-dot"></span>Acne</div>
+        <div class="condition-item"><span class="condition-dot"></span>Warts and Verrucae</div>
+        <div class="condition-item"><span class="condition-dot"></span>Molluscum Contagiosum</div>
+        <div class="condition-item"><span class="condition-dot"></span>Fungal Infections</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ VISIT THE CLINIC ══════════════════════ -->
+<section class="visit bg-light" id="contact">
+  <div class="container">
+    <div class="visit-grid">
+      <div class="visit-info reveal">
+
+        <h2>Visit Children's Clinic</h2>
+
+        <div class="visit-details">
+          <div class="visit-detail">
+            <div class="visit-detail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="visit-detail-text">
+              <div class="visit-clinic-pairs">
+                <div class="visit-clinic-pair">
+                  <div class="visit-address-block">
+                    <img src="../assets/mcc.png" alt="Mayfair Children's Clinic" class="visit-addr-logo" />
+                    <span><strong>Mayfair Children's Clinic</strong><br>15 Chesterfield St, Mayfair<br>London W1J 5JN</span>
+                  </div>
+                  <div class="visit-phone-row visit-phone-row--mobile-only">
+                    <div class="visit-detail-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    </div>
+                    <a href="tel:+442074930707">+44 207-493-0707</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="visit-detail visit-detail--desktop-only">
+            <div class="visit-detail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div class="visit-detail-text">
+              <a href="tel:+442074930707">+44 207-493-0707</a>
+            </div>
+          </div>
+
+          <div class="visit-detail">
+            <div class="visit-detail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="visit-detail-text">
+              <a href="mailto:enquiries@theintegratedmed.com">enquiries@theintegratedmed.com</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="visit-clinics reveal" style="grid-template-columns: 1fr;">
+        <div class="visit-clinic-col">
+          <span class="eyebrow eyebrow--label">Children Outpatients</span>
+          <div class="visit-photo">
+            <img src="../assets/ccclinic.jpeg" alt="The entrance to Mayfair Children's Clinic at 15 Chesterfield Street, Mayfair" />
+          </div>
+          <a href="https://maps.app.goo.gl/r5rFrhpFjnafWCrz8"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-outline-dark visit-map-btn">
+            Open In Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <a href="../index.html" class="brand-mark" aria-label="Integrated Medical Centre home">
+          <img src="../assets/imc-logo2.png" alt="Integrated Medical Centre" class="brand-mark-logo" />
+        </a>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/integrated-medical-centre/"><svg viewBox="0 0 24 24" width="16.2" height="16.2" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8.5z"/></svg>LinkedIn</a>
+          <a href="https://www.instagram.com/integratedmedicalcentre_"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>Instagram</a>
+        </div>
+        
+      </div>
+
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="../index.html#about">About Us</a></li>
+          <!-- <li><a href="pages/press.html">Press</a></li> -->
+          <li><a href="./childrensclinic.html">Children's Clinic</a></li>
+          <li><a href="../index.html#contact">Contact Us</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="../index.html#clinics">Integrated Medicine</a></li>
+          <li><a href="../index.html#clinics">Neuro-Muscular Rehabilitation</a></li>
+          <li><a href="../index.html#clinics">Health Screening</a></li>
+          <li><a href="../index.html#clinics">Joint Injection</a></li>
+          <li><a href="../index.html#clinics">Psychiatry</a></li>
+          <li><a href="../index.html#clinics">Ultrasound &amp; MRI</a></li>
+          <li><a href="../index.html#clinics">Health Products</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Shop</h5>
+        <ul>
+          <li><a href="../index.html#products">Health Products</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Integrated Medical Centre. All Rights Reserved.</p>
+      <p>75 Harley Street, London W1G 8QL</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js?v=12"></script>
+</body>
+</html>

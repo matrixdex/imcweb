@@ -437,10 +437,9 @@ section { padding: 6.5rem 0; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 .nav-toggle[aria-expanded="true"] span { background: var(--ink); }
 
-/* The full desktop nav (logo + 5 links + cart + CTA button) needs ~1150px
-   to lay out on one line without wrapping or clipping — 980px left a
-   cramped, overflowing middle ground on tablet-width screens. */
-@media (max-width: 1180px) {
+/* 7 nav links including "Children's Clinic" and "Terms & Conditions"
+   need ~1350px to sit on one line without wrapping. */
+@media (max-width: 1250px) {
   .nav-links, .nav-cart { display: none; }
   .nav-toggle { display: flex; }
   .brand-subtitle { white-space: normal; max-width: 160px; }
@@ -470,6 +469,9 @@ section { padding: 6.5rem 0; }
   .nav-links.mobile-open li.open .nav-dropdown { display: block; }
   .nav-links.mobile-open .nav-dropdown a { color: var(--ink); }
   .nav-links.mobile-open .nav-link { color: var(--ink); }
+}
+@media (min-width: 801px) and (max-width: 1250px) {
+  .brand-subtitle { white-space: nowrap; max-width: none; }
 }
 
 /* Below ~430px the logo + tagline no longer leave room for the hamburger
@@ -722,7 +724,7 @@ section { padding: 6.5rem 0; }
   row-gap: 1.75rem;
 }
 .welcome-photo-1 { aspect-ratio: 3 / 2; }
-.welcome-row-split .welcome-intro { grid-column: 1; grid-row: 1; }
+.welcome-row-split .welcome-intro { grid-column: 1; grid-row: 1; align-self: center; }
 .welcome-row-split .welcome-para-2 { grid-column: 1; grid-row: 2; }
 .welcome-row-split .welcome-photo-1 { grid-column: 2; grid-row: 1; }
 .welcome-row-split .welcome-photo-2 { grid-column: 2; grid-row: 2; }
