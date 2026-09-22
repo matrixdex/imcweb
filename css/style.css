@@ -711,6 +711,12 @@ section { padding: 6.5rem 0; }
   aspect-ratio: 4/3.4;
   box-shadow: var(--shadow-md);
 }
+.welcome-photo-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.welcome-row--top { align-items: start; }
 .welcome-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .welcome-section { background: var(--sand-100); padding-top: 3.25rem; padding-bottom: 3.25rem; }
 /* Row 1 variant: two vertically stacked photos beside the copy, instead
